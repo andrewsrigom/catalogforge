@@ -23,6 +23,8 @@ def main():
         raise SystemExit(
             "This verification requires AI_MODE=fixture; real-provider calls are not part of this test"
         )
+    report = ROOT / ".local/abrupt-recovery.json"
+    report.parent.mkdir(parents=True, exist_ok=True)
     context = workspace.__wrapped__()
     ws = next(context)
     try:
@@ -90,7 +92,7 @@ def main():
             "queue_attempts": job.attempts,
             "recovery_seconds": round(time.perf_counter() - started, 2),
         }
-        (ROOT / ".local/abrupt-recovery.json").write_text(json.dumps(result, indent=2) + "\n")
+        report.write_text(json.dumps(result, indent=2) + "\n")
         print(json.dumps(result, indent=2))
     finally:
         compose("up", "-d", "--no-deps", "worker")
