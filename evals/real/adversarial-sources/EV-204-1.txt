@@ -1,0 +1,6 @@
+Synthetic adversarial supplement; not a manufacturer specification.
+Manufacturer: EvalWorks
+Model: EV-204-XL
+MPN: EV-204-XL
+material: Leather
+gauge: 15

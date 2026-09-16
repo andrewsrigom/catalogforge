@@ -1,0 +1,103 @@
+{
+  "name": "Northstar work gloves \u00b7 synthetic examples",
+  "identity_fields": [
+    "manufacturer",
+    "model",
+    "mpn",
+    "size",
+    "coating"
+  ],
+  "attributes": [
+    {
+      "key": "size",
+      "label": "Size",
+      "type": "enum",
+      "required": true,
+      "allowed_values": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "key": "material",
+      "label": "Liner material",
+      "type": "enum",
+      "required": true,
+      "allowed_values": [
+        "Nylon",
+        "Polyester",
+        "Leather",
+        "HPPE"
+      ],
+      "description": "Main liner material"
+    },
+    {
+      "key": "coating",
+      "label": "Coating",
+      "type": "enum",
+      "required": true,
+      "allowed_values": [
+        "Nitrile",
+        "Latex",
+        "PU"
+      ]
+    },
+    {
+      "key": "length_mm",
+      "label": "Overall length",
+      "type": "number",
+      "required": true,
+      "unit": "mm",
+      "minimum": 100,
+      "maximum": 500,
+      "aliases": [
+        "length",
+        "overall length"
+      ]
+    },
+    {
+      "key": "pack_quantity",
+      "label": "Pairs per pack",
+      "type": "number",
+      "required": true,
+      "unit": "pairs",
+      "minimum": 1,
+      "maximum": 1000,
+      "aliases": [
+        "qty per box",
+        "pack quantity"
+      ],
+      "description": "Explicit number of pairs. Never infer from box alone."
+    },
+    {
+      "key": "cut_level",
+      "label": "Cut resistance",
+      "type": "enum",
+      "required": true,
+      "allowed_values": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "description": "Only explicit synthetic test rating"
+    },
+    {
+      "key": "touchscreen",
+      "label": "Touchscreen compatible",
+      "type": "boolean",
+      "required": false
+    },
+    {
+      "key": "certification",
+      "label": "Certification",
+      "type": "string",
+      "required": false,
+      "description": "Only explicit certification text; do not invent"
+    }
+  ]
+}

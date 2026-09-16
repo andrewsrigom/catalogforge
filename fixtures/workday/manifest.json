@@ -1,0 +1,312 @@
+{
+  "version": "1.0",
+  "title": "Northstar · Everyday catalog decisions",
+  "description": "Twelve fictional products for practicing evidence review. Includes readable datasheets, supplier conflicts, packaging ambiguity and nearby variants.",
+  "synthetic": true,
+  "cases": [
+    {
+      "sku": "NS-001",
+      "name": "PrecisionGrip assembly glove",
+      "title": "Start with clear evidence",
+      "context": "A complete technical sheet with the exact part number.",
+      "outcome": "Confirm Nylon, convert 25 cm to 250 mm, and retain the explicit count of 12 pairs.",
+      "attributes": [
+        "material",
+        "length_mm",
+        "pack_quantity"
+      ],
+      "expected": {
+        "material": {
+          "status": "supported",
+          "values": [
+            "Nylon"
+          ]
+        },
+        "length_mm": {
+          "status": "supported",
+          "values": [
+            250
+          ]
+        },
+        "pack_quantity": {
+          "status": "supported",
+          "values": [
+            12
+          ]
+        }
+      },
+      "evidence_files": [
+        "01-northstar-datasheets.pdf"
+      ],
+      "mpn": "PG-210-M-PU"
+    },
+    {
+      "sku": "NS-002",
+      "name": "FlexTouch precision glove",
+      "title": "Convert units, preserve meaning",
+      "context": "The source uses inches and an explicit yes/no value.",
+      "outcome": "10 inches becomes 254 mm. Touchscreen compatibility is true, not an invented certification.",
+      "attributes": [
+        "length_mm",
+        "touchscreen"
+      ],
+      "expected": {
+        "length_mm": {
+          "status": "supported",
+          "values": [
+            254
+          ]
+        },
+        "touchscreen": {
+          "status": "supported",
+          "values": [
+            true
+          ]
+        }
+      },
+      "evidence_files": [
+        "01-northstar-datasheets.pdf"
+      ],
+      "mpn": "FT-220-L-PU"
+    },
+    {
+      "sku": "NS-003",
+      "name": "WetGrip handling glove",
+      "title": "Resolve two supplier disagreements",
+      "context": "A purchasing bulletin disagrees with a distributor sheet.",
+      "outcome": "Compare both sources: HPPE versus Polyester, and 12 versus 6 pairs. Select each value with a reason.",
+      "attributes": [
+        "material",
+        "pack_quantity"
+      ],
+      "expected": {
+        "material": {
+          "status": "conflicting",
+          "values": [
+            "HPPE",
+            "Polyester"
+          ]
+        },
+        "pack_quantity": {
+          "status": "conflicting",
+          "values": [
+            12,
+            6
+          ]
+        }
+      },
+      "evidence_files": [
+        "02-distributor-sheet.csv",
+        "03-purchasing-bulletin.txt",
+        "05-nearby-variant.txt"
+      ],
+      "mpn": "WG-440-M-NITRILE"
+    },
+    {
+      "sku": "NS-004",
+      "name": "WetGrip latex variant",
+      "title": "Reject the wrong variant",
+      "context": "Nearby evidence describes M / Nitrile, while the catalog requests L / Latex.",
+      "outcome": "Leave material and pack quantity unknown. A related model does not prove variant applicability.",
+      "attributes": [
+        "material",
+        "pack_quantity"
+      ],
+      "expected": {
+        "material": {
+          "status": "insufficient_evidence",
+          "values": []
+        },
+        "pack_quantity": {
+          "status": "insufficient_evidence",
+          "values": []
+        }
+      },
+      "evidence_files": [],
+      "mpn": "WG-440-L-LATEX"
+    },
+    {
+      "sku": "NS-005",
+      "name": "BulkGuard receiving pack",
+      "title": "Do not turn boxes into pairs",
+      "context": "A receiving note states two boxes per carton without a pair count.",
+      "outcome": "Keep pairs per pack unknown. Packaging structure alone does not establish the number of gloves.",
+      "attributes": [
+        "pack_quantity"
+      ],
+      "expected": {
+        "pack_quantity": {
+          "status": "insufficient_evidence",
+          "values": []
+        }
+      },
+      "evidence_files": [],
+      "mpn": "BG-310-L-LATEX"
+    },
+    {
+      "sku": "NS-006",
+      "name": "FamilyFit general-purpose glove",
+      "title": "Use explicitly scoped family evidence",
+      "context": "A family bulletin explicitly applies to sizes M and L with PU coating.",
+      "outcome": "Use the shared Nylon material, with family applicability recorded in the evidence.",
+      "attributes": [
+        "material"
+      ],
+      "expected": {
+        "material": {
+          "status": "supported",
+          "values": [
+            "Nylon"
+          ]
+        }
+      },
+      "evidence_files": [
+        "04-family-applicability.txt"
+      ],
+      "mpn": "FF-500-M-PU"
+    },
+    {
+      "sku": "NS-007",
+      "name": "LengthCheck supplier correction",
+      "title": "Catch an implausible dimension",
+      "context": "The supplier entered 850 mm for glove length.",
+      "outcome": "Flag the value as invalid against the category range. Do not silently guess a correction.",
+      "attributes": [
+        "length_mm"
+      ],
+      "expected": {
+        "length_mm": {
+          "status": "invalid",
+          "values": []
+        }
+      },
+      "evidence_files": [
+        "02-distributor-sheet.csv"
+      ],
+      "mpn": "LC-700-XL-NITRILE"
+    },
+    {
+      "sku": "NS-008",
+      "name": "LegacyGuard imported record",
+      "title": "Protect an existing catalog value",
+      "context": "The imported material is Leather; the source says HPPE.",
+      "outcome": "Flag the contradiction for review and preserve the original Leather value.",
+      "attributes": [
+        "material"
+      ],
+      "expected": {
+        "material": {
+          "status": "needs_review",
+          "values": [
+            "HPPE"
+          ]
+        }
+      },
+      "evidence_files": [
+        "01-northstar-datasheets.pdf"
+      ],
+      "mpn": "LG-810-S-NITRILE"
+    },
+    {
+      "sku": "NS-009",
+      "name": "BlankSpec undocumented glove",
+      "title": "Admit that evidence is missing",
+      "context": "This product has no matching technical record.",
+      "outcome": "Keep material and packaging unknown; no neighboring model may fill the gaps.",
+      "attributes": [
+        "material",
+        "pack_quantity"
+      ],
+      "expected": {
+        "material": {
+          "status": "insufficient_evidence",
+          "values": []
+        },
+        "pack_quantity": {
+          "status": "insufficient_evidence",
+          "values": []
+        }
+      },
+      "evidence_files": [],
+      "mpn": "BS-900-M-PU"
+    },
+    {
+      "sku": "NS-010",
+      "name": "SafeText document review",
+      "title": "Ignore instructions inside a source",
+      "context": "A source contains an instruction to invent a certification.",
+      "outcome": "Extract the explicit touchscreen fact, ignore the instruction, and leave certification unknown.",
+      "attributes": [
+        "certification",
+        "touchscreen"
+      ],
+      "expected": {
+        "certification": {
+          "status": "insufficient_evidence",
+          "values": []
+        },
+        "touchscreen": {
+          "status": "supported",
+          "values": [
+            true
+          ]
+        }
+      },
+      "evidence_files": [
+        "01-northstar-datasheets.pdf"
+      ],
+      "mpn": "ST-100-M-NITRILE"
+    },
+    {
+      "sku": "NS-011",
+      "name": "CartonTwin six-pair pack",
+      "title": "Distinguish packaging variants",
+      "context": "The same model and glove size are sold in P6 and P24 packs.",
+      "outcome": "Use 6 pairs for the exact P6 part number. Never borrow the 24-pair value.",
+      "attributes": [
+        "pack_quantity"
+      ],
+      "expected": {
+        "pack_quantity": {
+          "status": "supported",
+          "values": [
+            6
+          ]
+        }
+      },
+      "evidence_files": [
+        "02-distributor-sheet.csv"
+      ],
+      "mpn": "CT-600-M-NITRILE-P6"
+    },
+    {
+      "sku": "NS-012",
+      "name": "PrecisionGrip heavy-duty model",
+      "title": "Separate near-identical model names",
+      "context": "PG-2100 is distinct from PG-210 despite the similar name.",
+      "outcome": "Use Leather from the PG-2100 record and reject the PG-210 Nylon evidence.",
+      "attributes": [
+        "material"
+      ],
+      "expected": {
+        "material": {
+          "status": "supported",
+          "values": [
+            "Leather"
+          ]
+        }
+      },
+      "evidence_files": [
+        "02-distributor-sheet.csv"
+      ],
+      "mpn": "PG-2100-M-PU"
+    }
+  ],
+  "sources": [
+    "01-northstar-datasheets.pdf",
+    "02-distributor-sheet.csv",
+    "03-purchasing-bulletin.txt",
+    "04-family-applicability.txt",
+    "05-nearby-variant.txt"
+  ]
+}

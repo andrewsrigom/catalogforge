@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "products": 50,
+  "sources": 5,
+  "product_runs": 6,
+  "worker_restart_verified": true,
+  "duplicate_review_verified": true,
+  "export_bytes": 4365,
+  "batch_id": "93294ae9-ecc1-4d37-904f-c748ae852f75",
+  "mode": "fixture"
+}

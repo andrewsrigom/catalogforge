@@ -1,0 +1,1045 @@
+{
+  "version": "1.0",
+  "synthetic": true,
+  "product_count": 50,
+  "description": "Deterministic integration dataset; no claim about actual model quality",
+  "cases": [
+    {
+      "sku": "CF-0001",
+      "mpn": "FG-100-XS-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "supported",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 1"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0002",
+      "mpn": "FG-100-S-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 2"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0003",
+      "mpn": "FG-100-M-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [
+        "material"
+      ],
+      "populated_contradiction": false,
+      "scenario": "conflict",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 3"
+        },
+        {
+          "filename": "04-conflicting-record.txt",
+          "section": "Record 1"
+        }
+      ],
+      "accepted_conflicting_values": {
+        "material": [
+          "Nylon",
+          "Leather"
+        ]
+      }
+    },
+    {
+      "sku": "CF-0004",
+      "mpn": "FG-100-L-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 4"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0005",
+      "mpn": "FG-100-XL-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 5"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0006",
+      "mpn": "FG-101-XS-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 230,
+        "pack_quantity": null,
+        "cut_level": "A2",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "uncertain_packaging",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 6"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0007",
+      "mpn": "FG-101-S-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": true,
+      "scenario": "populated_contradiction",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 7"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0008",
+      "mpn": "FG-101-M-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 8"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0009",
+      "mpn": "FG-101-L-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 9"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0010",
+      "mpn": "FG-101-XL-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "prompt_injection",
+      "expected_sources": [
+        {
+          "filename": "01-technical-records.txt",
+          "section": "Record 10"
+        }
+      ]
+    },
+    {
+      "sku": "CF-0011",
+      "mpn": "FG-102-XS-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A3",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 2
+        }
+      ]
+    },
+    {
+      "sku": "CF-0012",
+      "mpn": "FG-102-S-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A3",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 3
+        }
+      ]
+    },
+    {
+      "sku": "CF-0013",
+      "mpn": "FG-102-M-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A3",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 4
+        }
+      ]
+    },
+    {
+      "sku": "CF-0014",
+      "mpn": "FG-102-L-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A3",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "sku": "CF-0015",
+      "mpn": "FG-102-XL-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A3",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "sku": "CF-0016",
+      "mpn": "FG-103-XS-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "sku": "CF-0017",
+      "mpn": "FG-103-S-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "sku": "CF-0018",
+      "mpn": "FG-103-M-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "sku": "CF-0019",
+      "mpn": "FG-103-L-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "sku": "CF-0020",
+      "mpn": "FG-103-XL-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "sku": "CF-0021",
+      "mpn": "FG-104-XS-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "sku": "CF-0022",
+      "mpn": "FG-104-S-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 13
+        }
+      ]
+    },
+    {
+      "sku": "CF-0023",
+      "mpn": "FG-104-M-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 14
+        }
+      ]
+    },
+    {
+      "sku": "CF-0024",
+      "mpn": "FG-104-L-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 15
+        }
+      ]
+    },
+    {
+      "sku": "CF-0025",
+      "mpn": "FG-104-XL-N",
+      "expected": {
+        "material": "HPPE",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 16
+        }
+      ]
+    },
+    {
+      "sku": "CF-0026",
+      "mpn": "FG-105-XS-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 17
+        }
+      ]
+    },
+    {
+      "sku": "CF-0027",
+      "mpn": "FG-105-S-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "sku": "CF-0028",
+      "mpn": "FG-105-M-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 19
+        }
+      ]
+    },
+    {
+      "sku": "CF-0029",
+      "mpn": "FG-105-L-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 20
+        }
+      ]
+    },
+    {
+      "sku": "CF-0030",
+      "mpn": "FG-105-XL-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A1",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 21
+        }
+      ]
+    },
+    {
+      "sku": "CF-0031",
+      "mpn": "FG-106-XS-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 22
+        }
+      ]
+    },
+    {
+      "sku": "CF-0032",
+      "mpn": "FG-106-S-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 23
+        }
+      ]
+    },
+    {
+      "sku": "CF-0033",
+      "mpn": "FG-106-M-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 24
+        }
+      ]
+    },
+    {
+      "sku": "CF-0034",
+      "mpn": "FG-106-L-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 25
+        }
+      ]
+    },
+    {
+      "sku": "CF-0035",
+      "mpn": "FG-106-XL-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A2",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 26
+        }
+      ]
+    },
+    {
+      "sku": "CF-0036",
+      "mpn": "FG-107-XS-N",
+      "expected": {
+        "material": null,
+        "length_mm": null,
+        "pack_quantity": null,
+        "cut_level": null,
+        "touchscreen": null,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "missing_evidence",
+      "expected_sources": []
+    },
+    {
+      "sku": "CF-0037",
+      "mpn": "FG-107-S-N",
+      "expected": {
+        "material": null,
+        "length_mm": null,
+        "pack_quantity": null,
+        "cut_level": null,
+        "touchscreen": null,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "missing_evidence",
+      "expected_sources": []
+    },
+    {
+      "sku": "CF-0038",
+      "mpn": "FG-107-M-N",
+      "expected": {
+        "material": null,
+        "length_mm": null,
+        "pack_quantity": null,
+        "cut_level": null,
+        "touchscreen": null,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "missing_evidence",
+      "expected_sources": []
+    },
+    {
+      "sku": "CF-0039",
+      "mpn": "FG-107-L-N",
+      "expected": {
+        "material": null,
+        "length_mm": null,
+        "pack_quantity": null,
+        "cut_level": null,
+        "touchscreen": null,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "missing_evidence",
+      "expected_sources": []
+    },
+    {
+      "sku": "CF-0040",
+      "mpn": "FG-107-XL-N",
+      "expected": {
+        "material": null,
+        "length_mm": null,
+        "pack_quantity": null,
+        "cut_level": null,
+        "touchscreen": null,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "missing_evidence",
+      "expected_sources": []
+    },
+    {
+      "sku": "CF-0041",
+      "mpn": "FG-108-XS-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 27
+        }
+      ]
+    },
+    {
+      "sku": "CF-0042",
+      "mpn": "FG-108-S-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 28
+        }
+      ]
+    },
+    {
+      "sku": "CF-0043",
+      "mpn": "FG-108-M-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 29
+        }
+      ]
+    },
+    {
+      "sku": "CF-0044",
+      "mpn": "FG-108-L-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 30
+        }
+      ]
+    },
+    {
+      "sku": "CF-0045",
+      "mpn": "FG-108-XL-N",
+      "expected": {
+        "material": "Polyester",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A4",
+        "touchscreen": false,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "02-source-sheet.csv",
+          "row": 31
+        }
+      ]
+    },
+    {
+      "sku": "CF-0046",
+      "mpn": "FG-109-XS-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 230,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "03-datasheets.pdf",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "sku": "CF-0047",
+      "mpn": "FG-109-S-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 240,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "03-datasheets.pdf",
+          "page": 2
+        }
+      ]
+    },
+    {
+      "sku": "CF-0048",
+      "mpn": "FG-109-M-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 250,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "03-datasheets.pdf",
+          "page": 3
+        }
+      ]
+    },
+    {
+      "sku": "CF-0049",
+      "mpn": "FG-109-L-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 260,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "03-datasheets.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "sku": "CF-0050",
+      "mpn": "FG-109-XL-N",
+      "expected": {
+        "material": "Nylon",
+        "length_mm": 270,
+        "pack_quantity": 12,
+        "cut_level": "A5",
+        "touchscreen": true,
+        "certification": null
+      },
+      "conflicts": [],
+      "populated_contradiction": false,
+      "scenario": "unit_conversion",
+      "expected_sources": [
+        {
+          "filename": "03-datasheets.pdf",
+          "page": 5
+        }
+      ]
+    }
+  ]
+}

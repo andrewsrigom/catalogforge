@@ -1,0 +1,11 @@
+Dataset: Synthetic CatalogForge fixture v1
+Manufacturer: ForgeWorks
+Model: FG-1000
+MPN: FG-1000-XS-N
+Size: XS
+Coating: Nitrile
+Material: Leather
+Length: 23 cm
+Qty per box: 99 pairs
+Cut level: A1
+Touchscreen: no

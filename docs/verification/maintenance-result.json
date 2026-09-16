@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "seed_idempotence": true,
+  "reindex_preserves_chunk_ids": true,
+  "reset_preserves_other_workspaces": true,
+  "demo_products": 50,
+  "demo_sources": 5
+}

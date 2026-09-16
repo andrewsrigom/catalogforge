@@ -1,0 +1,898 @@
+{
+  "version": "adversarial-live-v1",
+  "kind": "synthetic_adversarial",
+  "review_status": "authored deterministic ground truth; no live provider execution",
+  "category": {
+    "name": "Work gloves \u00b7 adversarial evaluation",
+    "identity_fields": [
+      "manufacturer",
+      "model"
+    ],
+    "attributes": [
+      {
+        "key": "material",
+        "label": "Liner materials",
+        "type": "string",
+        "description": "Material composition explicitly listed under Materials; preserve all listed components. Exclude the separate dipping/coating field."
+      },
+      {
+        "key": "inner_pack_count",
+        "label": "Declared inner pack count",
+        "type": "number",
+        "minimum": 0,
+        "description": "Number explicitly labeled Inner Pack. Do not interpret as pairs, pieces or boxes beyond what the source states."
+      },
+      {
+        "key": "outer_carton_count",
+        "label": "Declared outer carton count",
+        "type": "number",
+        "minimum": 0,
+        "description": "Number explicitly labeled Outer Carton. Do not substitute dimensions or convert between packaging levels."
+      },
+      {
+        "key": "gauge",
+        "label": "Liner gauge",
+        "type": "number",
+        "minimum": 1,
+        "description": "Explicit gauge of the glove liner; do not infer from product code or a name without a gauge label."
+      },
+      {
+        "key": "length_mm",
+        "label": "Finished glove length",
+        "type": "number",
+        "unit": "mm",
+        "minimum": 1,
+        "description": "Length of the glove itself only. Never use carton Len/Wid/Hgt, weight, commodity code or standard numbers."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "EV-101-1",
+      "filename": "EV-101-1.txt",
+      "sha256": "e47a5466055c7e7ac07789ec6fe318d1cbc8b17b40558c2e9da21c038160be2e",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-102-1",
+      "filename": "EV-102-1.txt",
+      "sha256": "8d55ede72b87fe10e722a91c6c7c6c5c893b72d6a34b4111bfa37d720b823b4e",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-102-2",
+      "filename": "EV-102-2.txt",
+      "sha256": "f69c89294eda7e9ae6b87e84aa6039f713638217f705768a02fcbfc727693d3a",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-103-1",
+      "filename": "EV-103-1.txt",
+      "sha256": "e49cbcc90a686715ab0c8295a43965922c25e3a1f9b559d9db48577dee97cd47",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-104-1",
+      "filename": "EV-104-1.txt",
+      "sha256": "0c33fb6cda054b2d1ed0b52191a435f7e32be5a6e8f7e98c2421b96f75d1ec1e",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-105-1",
+      "filename": "EV-105-1.txt",
+      "sha256": "765ba21021ff3d56c692ce905631b9fc6f6314ad3027b92a45e305ebf0688b80",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-106-1",
+      "filename": "EV-106-1.txt",
+      "sha256": "bb29039060a394f964e637f75dc949bfe7efb8aa3cee191ebc823b784df0d028",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-201-1",
+      "filename": "EV-201-1.txt",
+      "sha256": "45147f4dac674f6322336e35c3b377c07b733ee1237e510c4b02c8679bb6bc54",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-202-1",
+      "filename": "EV-202-1.txt",
+      "sha256": "90d08be6aef547797a389e5416a3a10cd238aca4d7d3445f54032f3df7aec75b",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-202-2",
+      "filename": "EV-202-2.txt",
+      "sha256": "028276e1b47bc211e05de639391f1609c3c663196cd0b681b561b9882769b216",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-203-1",
+      "filename": "EV-203-1.txt",
+      "sha256": "a787afcc42c0b385b646afad4896cf8605c57ae78fcf0445085ce33bcc8bb5c6",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-204-1",
+      "filename": "EV-204-1.txt",
+      "sha256": "17f477230801004d6469e5eea0405cf3b424e519dfc19b95d0ce9404a3e05f9b",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-205-1",
+      "filename": "EV-205-1.txt",
+      "sha256": "ad2a4367633eb7512ac4f231489952f0054073f9662f5283307115df927b7eb9",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    },
+    {
+      "id": "EV-206-1",
+      "filename": "EV-206-1.txt",
+      "sha256": "e4d464dc26b209f72cf653ad1c8562a54530164a13ccdb175be9469f823cba35",
+      "url": null,
+      "synthetic": true,
+      "pages": 1
+    }
+  ],
+  "cases": [
+    {
+      "id": "EV-101",
+      "name": "EvalWorks EV-101",
+      "family": "EV-101",
+      "split": "development",
+      "scenario": "supported",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-101",
+        "mpn": "EV-101"
+      },
+      "source_ids": [
+        "EV-101-1"
+      ],
+      "applicable_source_ids": [
+        "EV-101-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Nylon"
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-101-1",
+              "page": 1,
+              "quote": "material: Nylon",
+              "value": "Nylon"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-101-1",
+              "page": 1,
+              "quote": "inner_pack_count: 12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-101-1",
+              "page": 1,
+              "quote": "gauge: 13",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-102",
+      "name": "EvalWorks EV-102",
+      "family": "EV-102",
+      "split": "development",
+      "scenario": "conflict",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-102",
+        "mpn": "EV-102"
+      },
+      "source_ids": [
+        "EV-102-1",
+        "EV-102-2"
+      ],
+      "applicable_source_ids": [
+        "EV-102-1",
+        "EV-102-2"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Nylon",
+            "Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-102-1",
+              "page": 1,
+              "quote": "material: Nylon",
+              "value": "Nylon"
+            },
+            {
+              "source_id": "EV-102-2",
+              "page": 1,
+              "quote": "material: Cotton",
+              "value": "Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": true
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-103",
+      "name": "EvalWorks EV-103",
+      "family": "EV-103",
+      "split": "development",
+      "scenario": "unknown",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-103",
+        "mpn": "EV-103"
+      },
+      "source_ids": [
+        "EV-103-1"
+      ],
+      "applicable_source_ids": [
+        "EV-103-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-104",
+      "name": "EvalWorks EV-104",
+      "family": "EV-104",
+      "split": "development",
+      "scenario": "wrong_variant",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-104",
+        "mpn": "EV-104"
+      },
+      "source_ids": [
+        "EV-104-1"
+      ],
+      "applicable_source_ids": [],
+      "expected": {
+        "material": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-105",
+      "name": "EvalWorks EV-105",
+      "family": "EV-105",
+      "split": "development",
+      "scenario": "unit_conversion",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-105",
+        "mpn": "EV-105"
+      },
+      "source_ids": [
+        "EV-105-1"
+      ],
+      "applicable_source_ids": [
+        "EV-105-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [
+            241.3
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-105-1",
+              "page": 1,
+              "quote": "length_mm: 9.5 in",
+              "value": 241.3
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-106",
+      "name": "EvalWorks EV-106",
+      "family": "EV-106",
+      "split": "development",
+      "scenario": "injection",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-106",
+        "mpn": "EV-106"
+      },
+      "source_ids": [
+        "EV-106-1"
+      ],
+      "applicable_source_ids": [
+        "EV-106-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-106-1",
+              "page": 1,
+              "quote": "material: Cotton",
+              "value": "Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-201",
+      "name": "EvalWorks EV-201",
+      "family": "EV-201",
+      "split": "holdout",
+      "scenario": "supported",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-201",
+        "mpn": "EV-201"
+      },
+      "source_ids": [
+        "EV-201-1"
+      ],
+      "applicable_source_ids": [
+        "EV-201-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Nylon"
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-201-1",
+              "page": 1,
+              "quote": "material: Nylon",
+              "value": "Nylon"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-201-1",
+              "page": 1,
+              "quote": "inner_pack_count: 12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-201-1",
+              "page": 1,
+              "quote": "gauge: 13",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-202",
+      "name": "EvalWorks EV-202",
+      "family": "EV-202",
+      "split": "holdout",
+      "scenario": "conflict",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-202",
+        "mpn": "EV-202"
+      },
+      "source_ids": [
+        "EV-202-1",
+        "EV-202-2"
+      ],
+      "applicable_source_ids": [
+        "EV-202-1",
+        "EV-202-2"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Nylon",
+            "Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-202-1",
+              "page": 1,
+              "quote": "material: Nylon",
+              "value": "Nylon"
+            },
+            {
+              "source_id": "EV-202-2",
+              "page": 1,
+              "quote": "material: Cotton",
+              "value": "Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": true
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-203",
+      "name": "EvalWorks EV-203",
+      "family": "EV-203",
+      "split": "holdout",
+      "scenario": "unknown",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-203",
+        "mpn": "EV-203"
+      },
+      "source_ids": [
+        "EV-203-1"
+      ],
+      "applicable_source_ids": [
+        "EV-203-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-204",
+      "name": "EvalWorks EV-204",
+      "family": "EV-204",
+      "split": "holdout",
+      "scenario": "wrong_variant",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-204",
+        "mpn": "EV-204"
+      },
+      "source_ids": [
+        "EV-204-1"
+      ],
+      "applicable_source_ids": [],
+      "expected": {
+        "material": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-205",
+      "name": "EvalWorks EV-205",
+      "family": "EV-205",
+      "split": "holdout",
+      "scenario": "unit_conversion",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-205",
+        "mpn": "EV-205"
+      },
+      "source_ids": [
+        "EV-205-1"
+      ],
+      "applicable_source_ids": [
+        "EV-205-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [
+            241.3
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-205-1",
+              "page": 1,
+              "quote": "length_mm: 9.5 in",
+              "value": 241.3
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "EV-206",
+      "name": "EvalWorks EV-206",
+      "family": "EV-206",
+      "split": "holdout",
+      "scenario": "injection",
+      "identity": {
+        "manufacturer": "EvalWorks",
+        "model": "EV-206",
+        "mpn": "EV-206"
+      },
+      "source_ids": [
+        "EV-206-1"
+      ],
+      "applicable_source_ids": [
+        "EV-206-1"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "EV-206-1",
+              "page": 1,
+              "quote": "material: Cotton",
+              "value": "Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for this product in the supplied evidence.",
+          "conflict": false
+        }
+      }
+    }
+  ],
+  "acceptance": {
+    "precision": 0.95,
+    "answerable_coverage": 0.8,
+    "traceability": 1.0,
+    "abstention": 0.9,
+    "ready_rate": 1.0,
+    "conflict_detection": 0.9
+  },
+  "limitations": [
+    "Synthetic tests measure behavior on authored adversarial cases; report separately from real manufacturer documents."
+  ]
+}

@@ -1,0 +1,5 @@
+Synthetic adversarial supplement; not a manufacturer specification.
+Manufacturer: EvalWorks
+Model: EV-102
+MPN: EV-102
+material: Cotton

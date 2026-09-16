@@ -1,0 +1,11 @@
+<template>
+  <img
+    class="brand-icon"
+    src="/brand/catalogforge-mark.png"
+    alt=""
+    aria-hidden="true"
+    width="36"
+    height="36"
+    decoding="async"
+  />
+</template>

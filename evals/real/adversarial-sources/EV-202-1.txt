@@ -1,0 +1,5 @@
+Synthetic adversarial supplement; not a manufacturer specification.
+Manufacturer: EvalWorks
+Model: EV-202
+MPN: EV-202
+material: Nylon

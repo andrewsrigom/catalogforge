@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-16",
+  "backend": 117,
+  "frontend": 6,
+  "browser": 6,
+  "scope": "Local integration verification and separate frozen live evaluations. Production load and remote CI were not evaluated.",
+  "fixture_attribute_checks": {
+    "passed": 319,
+    "total": 319
+  },
+  "abrupt_recovery": {
+    "signal": "SIGKILL",
+    "approval_applied_once": true,
+    "seconds": 47.36
+  },
+  "remote_ci_executed": false,
+  "records": {
+    "backend": "docs/verification/release/pytest-final.xml",
+    "browser": "docs/verification/release/results.json",
+    "recovery": "docs/verification/release/results.json",
+    "live_evaluation": "docs/verification/release/results.json"
+  },
+  "live_holdout": {
+    "products": 10,
+    "correct_proposals": 37,
+    "proposals": 38,
+    "covered_fields": 37,
+    "answerable_fields": 39,
+    "wrong_identity": 0,
+    "traceable_proposals": 38,
+    "independent_human_label_review": false,
+    "adversarial_cases": 12,
+    "adversarial_conflicts_detected": 2,
+    "adversarial_conflicts": 2,
+    "known_unit_conversion_omissions": 2,
+    "all_proposals_require_review": true
+  }
+}

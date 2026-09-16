@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "separate_workspace": true,
+  "empty_products_and_sources": true,
+  "mode": "real",
+  "provider_ready": false,
+  "worker_running": false,
+  "recorded_provider_calls": 0,
+  "running_services": [
+    "api",
+    "db",
+    "web"
+  ]
+}

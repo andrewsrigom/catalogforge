@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "signal": "SIGKILL",
+  "blocked_step": "Applying approved changes",
+  "checkpoint_and_candidate_preserved": true,
+  "approved_once": true,
+  "product_revision": 2,
+  "queue_attempts": 2,
+  "recovery_seconds": 70.87
+}

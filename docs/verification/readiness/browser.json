@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "startTime": "2026-09-16T15:58:08.867Z",
+    "duration": 48386.339,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "journey.spec.ts",
+      "title": "import \u2192 ingest \u2192 conflict review \u2192 approve \u2192 export, with source navigation",
+      "ok": true
+    },
+    {
+      "file": "journey.spec.ts",
+      "title": "tablet layout keeps catalog navigation and controls available",
+      "ok": true
+    },
+    {
+      "file": "journey.spec.ts",
+      "title": "guided examples explain outcomes, filter proposals and keep unknown fields empty",
+      "ok": true
+    },
+    {
+      "file": "journey.spec.ts",
+      "title": "session expiry during navigation returns to login and preserves the catalog",
+      "ok": true
+    },
+    {
+      "file": "journey.spec.ts",
+      "title": "public product presentation works without a session and adapts to mobile",
+      "ok": true
+    },
+    {
+      "file": "journey.spec.ts",
+      "title": "guided walkthrough opens the actual PDF, shows checkpoints and preserves the reviewed result",
+      "ok": true
+    }
+  ]
+}

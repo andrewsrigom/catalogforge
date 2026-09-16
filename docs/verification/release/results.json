@@ -1,0 +1,1498 @@
+{
+  "date": "2026-09-16",
+  "scope": "Local glove catalog enrichment, evidence, review and export",
+  "frozen_runtime": {
+    "source_hashes": {
+      "apps/api/catalogforge/main.py": "5de67d134ecaf46e91ac834d64141aff5b06bdd223a05032c953a4edce931b68",
+      "apps/api/catalogforge/contracts.py": "d0e67a61c0b13d38484a2f746801f261387a63d2d095cf14fc4c0e4046d94c98",
+      "apps/api/catalogforge/retrieval.py": "b53cfdb98f1584e318c4b931966d5279125c14a1475600a2bfda74e716ef20ea",
+      "apps/api/catalogforge/storage.py": "bb85b3e6cc2bf616e0c7f788ac39cc78ba723babdaabaf2fd68d61e7338029ee",
+      "apps/api/catalogforge/models.py": "47d4c8ce311d0e0bb0a15bed174ecefe62145bedfca170d7f4d8175b44cb576e",
+      "apps/api/catalogforge/examples.py": "8a797c334e9e24a3eaeff9c6c024d523acb0a32b801816bc9ed31cbc1fe8ba43",
+      "apps/api/catalogforge/cli.py": "47ec7e41a565d13874db8b9af440986c757ab0cafb258cae887e985dcaf8824d",
+      "apps/api/catalogforge/db.py": "024631296ff29977fa05c2024b48eb6ca8b79ee91b753db49ba016764c2e2b18",
+      "apps/api/catalogforge/services.py": "1b4ac02b707e7bd9341fee78fca56688426ada56b261f8d23c5e14f8e7eb2473",
+      "apps/api/catalogforge/config.py": "db22acfd3fac28792d935ea74153ca95f4f8f8eb9c2aa1e8f3c0fe77db980094",
+      "apps/api/catalogforge/operations.py": "61f795a62f795fd15e244a97aa4e0d23a25c4f1e0b4fffd36a95f48c2432798d",
+      "apps/api/catalogforge/maintenance.py": "491a74a71c8cdfd9bb4e1ffc025664c3aabe9722c606995f513c5643b964293b",
+      "apps/api/catalogforge/provider_meter.py": "94eeac86e8cb7121fdcca70a0994ab2d9e89a5503333558eb496845c1ddc7544",
+      "apps/api/catalogforge/auth.py": "32f1b3c61661d08805019395d6fdd211a0bd6ac5b1d77cbfe0b90e97a50e872b",
+      "apps/api/catalogforge/domain.py": "8f19119c367ad3e2335fe3ec8a576e72cb9c08fc5d1befb31b34fdcef0715808",
+      "apps/api/catalogforge/worker.py": "a03fe967e43a2f271c4c726d69ef1fcc3bee4a3005c39fe1091b6c4785b6eb3b",
+      "apps/api/catalogforge/timeline.py": "cf2a78c37bf03039808ff1d8697c4edf3ebdebe427ff3caa51adbf84a5ca5f04",
+      "apps/api/catalogforge/providers.py": "38f60b6eb9ccfd1a7309e7a9408dd1698733c0752cb9dda639d4875cf328b248",
+      "apps/api/catalogforge/enrichment.py": "e7c082551746a40a0d727775d1694d9f6e8a320e229e577c1fbe6adfba1ef758",
+      "apps/api/catalogforge/ingestion.py": "e3c3bc8fc00795bc18c4df5de607cbc74670344181930d097fa6c0ab0ef44a7a",
+      "apps/api/catalogforge/__init__.py": "e37fe19957d360c427c1d442c7ed5c0f84758cd48a3f5133421748307a93c857",
+      "apps/api/catalogforge/walkthrough.py": "a88cf1efd033bcb1026f087a680ff28480957460f538ae55116b18b12fbeaf3c"
+    },
+    "image": "catalogforge-api:release-v5",
+    "git_head": "390d864bfd464b4d3ed04e862d8d8e411d47d45e",
+    "identity_prompt": "catalogforge-identity-v3",
+    "extraction_prompt": "catalogforge-extraction-v2",
+    "chat_model": "gpt-4.1-mini",
+    "embedding_model": "text-embedding-3-small",
+    "datasets": {
+      "dataset-v1.json": "d97df86503901b424b01cb3240b75cbe628fa97a7a193023ece6123310a8aa96",
+      "adversarial-v1.json": "070d5dde75b3ad8646245be7cdf8294901b30eb4a4334d84765d487aafbc64fe"
+    }
+  },
+  "image_digest": "sha256:e744065977fb6adbb194eb55f40bb646550ab8f7de31b58c744393ebec7f2de2",
+  "phases": {
+    "development": {
+      "execution": {
+        "stage": "development",
+        "completed": true,
+        "passed": false,
+        "counts": {
+          "excluded_candidates": 33,
+          "proposals": 67,
+          "runs": 20,
+          "ready_runs": 20,
+          "failed_runs": 0,
+          "correct_proposals": 64,
+          "wrong_identity": 0,
+          "traceable_proposals": 67,
+          "correct_evidence": 64,
+          "unsupported_proposals": 3,
+          "attribute_checks": 100,
+          "answerable_fields": 71,
+          "correctly_covered_fields": 64,
+          "unknown_fields": 29,
+          "correct_abstentions": 26,
+          "retrieval_expected": 20,
+          "retrieval_found": 20
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": false,
+          "ready_rate": true,
+          "identity": true
+        },
+        "elapsed_seconds": 396.753,
+        "worker_running": false,
+        "calls": 118,
+        "metered_usd": 0.03746,
+        "unknown_usage_calls": 0
+      },
+      "score": {
+        "evaluation_kind": "live_provider_quality",
+        "dataset_version": "portwest-real-v1",
+        "metrics": {
+          "precision": {
+            "numerator": 64,
+            "denominator": 67,
+            "value": 0.9552238805970149
+          },
+          "answerable_coverage": {
+            "numerator": 64,
+            "denominator": 71,
+            "value": 0.9014084507042254
+          },
+          "evidence_correctness": {
+            "numerator": 64,
+            "denominator": 67,
+            "value": 0.9552238805970149
+          },
+          "traceability": {
+            "numerator": 67,
+            "denominator": 67,
+            "value": 1.0
+          },
+          "unsupported_proposal_rate": {
+            "numerator": 3,
+            "denominator": 67,
+            "value": 0.04477611940298507
+          },
+          "abstention": {
+            "numerator": 26,
+            "denominator": 29,
+            "value": 0.896551724137931
+          },
+          "conflict_detection": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "retrieval_recall": {
+            "numerator": 20,
+            "denominator": 20,
+            "value": 1.0
+          },
+          "ready_rate": {
+            "numerator": 20,
+            "denominator": 20,
+            "value": 1.0
+          },
+          "failure_rate": {
+            "numerator": 0,
+            "denominator": 20,
+            "value": 0.0
+          }
+        },
+        "counts": {
+          "excluded_candidates": 33,
+          "proposals": 67,
+          "runs": 20,
+          "ready_runs": 20,
+          "failed_runs": 0,
+          "correct_proposals": 64,
+          "wrong_identity": 0,
+          "traceable_proposals": 67,
+          "correct_evidence": 64,
+          "unsupported_proposals": 3,
+          "attribute_checks": 100,
+          "answerable_fields": 71,
+          "correctly_covered_fields": 64,
+          "unknown_fields": 29,
+          "correct_abstentions": 26,
+          "retrieval_expected": 20,
+          "retrieval_found": 20
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": false,
+          "ready_rate": true,
+          "identity": true
+        },
+        "passed": false,
+        "unmeasured": [],
+        "cases": [
+          {
+            "id": "A040",
+            "status": "waiting_review",
+            "proposals": 1,
+            "correct": 1,
+            "error": null
+          },
+          {
+            "id": "A060",
+            "status": "waiting_review",
+            "proposals": 1,
+            "correct": 1,
+            "error": null
+          },
+          {
+            "id": "A106",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A110",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A111",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A120",
+            "status": "waiting_review",
+            "proposals": 5,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A123",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A130",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A140",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A145",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A146",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A148",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A150",
+            "status": "waiting_review",
+            "proposals": 5,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A195",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A198",
+            "status": "waiting_review",
+            "proposals": 5,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A210",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          },
+          {
+            "id": "A220",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          },
+          {
+            "id": "A260",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A261",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A304",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          }
+        ],
+        "latency_median_seconds": 4.725,
+        "note": "Scores are measured before human review. Null metrics are not passes. A small single-manufacturer corpus does not establish general model quality."
+      }
+    },
+    "development-confirmation": {
+      "execution": {
+        "stage": "development-confirmation",
+        "completed": true,
+        "passed": true,
+        "counts": {
+          "excluded_candidates": 33,
+          "proposals": 67,
+          "runs": 20,
+          "ready_runs": 20,
+          "failed_runs": 0,
+          "correct_proposals": 66,
+          "wrong_identity": 0,
+          "traceable_proposals": 67,
+          "correct_evidence": 66,
+          "unsupported_proposals": 1,
+          "attribute_checks": 100,
+          "answerable_fields": 71,
+          "correctly_covered_fields": 66,
+          "unknown_fields": 29,
+          "correct_abstentions": 28,
+          "retrieval_expected": 20,
+          "retrieval_found": 20
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "identity": true
+        },
+        "elapsed_seconds": 539.046,
+        "worker_running": false,
+        "calls": 121,
+        "metered_usd": 0.038018,
+        "unknown_usage_calls": 0
+      },
+      "score": {
+        "evaluation_kind": "live_provider_quality",
+        "dataset_version": "portwest-real-v1",
+        "metrics": {
+          "precision": {
+            "numerator": 66,
+            "denominator": 67,
+            "value": 0.9850746268656716
+          },
+          "answerable_coverage": {
+            "numerator": 66,
+            "denominator": 71,
+            "value": 0.9295774647887324
+          },
+          "evidence_correctness": {
+            "numerator": 66,
+            "denominator": 67,
+            "value": 0.9850746268656716
+          },
+          "traceability": {
+            "numerator": 67,
+            "denominator": 67,
+            "value": 1.0
+          },
+          "unsupported_proposal_rate": {
+            "numerator": 1,
+            "denominator": 67,
+            "value": 0.014925373134328358
+          },
+          "abstention": {
+            "numerator": 28,
+            "denominator": 29,
+            "value": 0.9655172413793104
+          },
+          "conflict_detection": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "retrieval_recall": {
+            "numerator": 20,
+            "denominator": 20,
+            "value": 1.0
+          },
+          "ready_rate": {
+            "numerator": 20,
+            "denominator": 20,
+            "value": 1.0
+          },
+          "failure_rate": {
+            "numerator": 0,
+            "denominator": 20,
+            "value": 0.0
+          }
+        },
+        "counts": {
+          "excluded_candidates": 33,
+          "proposals": 67,
+          "runs": 20,
+          "ready_runs": 20,
+          "failed_runs": 0,
+          "correct_proposals": 66,
+          "wrong_identity": 0,
+          "traceable_proposals": 67,
+          "correct_evidence": 66,
+          "unsupported_proposals": 1,
+          "attribute_checks": 100,
+          "answerable_fields": 71,
+          "correctly_covered_fields": 66,
+          "unknown_fields": 29,
+          "correct_abstentions": 28,
+          "retrieval_expected": 20,
+          "retrieval_found": 20
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "identity": true
+        },
+        "passed": true,
+        "unmeasured": [],
+        "cases": [
+          {
+            "id": "A040",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A060",
+            "status": "waiting_review",
+            "proposals": 1,
+            "correct": 1,
+            "error": null
+          },
+          {
+            "id": "A106",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A110",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A111",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A120",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A123",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A130",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A140",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A145",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A146",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A148",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A150",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A195",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A198",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A210",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          },
+          {
+            "id": "A220",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          },
+          {
+            "id": "A260",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A261",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A304",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          }
+        ],
+        "latency_median_seconds": 5.0385,
+        "note": "Scores are measured before human review. Null metrics are not passes. A small single-manufacturer corpus does not establish general model quality."
+      }
+    },
+    "adversarial-development": {
+      "execution": {
+        "stage": "adversarial-development",
+        "completed": true,
+        "passed": true,
+        "counts": {
+          "excluded_candidates": 25,
+          "proposals": 6,
+          "runs": 6,
+          "ready_runs": 6,
+          "failed_runs": 0,
+          "correct_proposals": 6,
+          "wrong_identity": 0,
+          "traceable_proposals": 6,
+          "correct_evidence": 6,
+          "unsupported_proposals": 0,
+          "attribute_checks": 30,
+          "answerable_fields": 6,
+          "correctly_covered_fields": 5,
+          "unknown_fields": 24,
+          "correct_abstentions": 24,
+          "retrieval_expected": 5,
+          "retrieval_found": 5,
+          "expected_conflicts": 1,
+          "detected_conflicts": 1
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "conflict_detection": true,
+          "identity": true
+        },
+        "elapsed_seconds": 86.672,
+        "worker_running": false,
+        "calls": 24,
+        "metered_usd": 0.002695,
+        "unknown_usage_calls": 0
+      },
+      "score": {
+        "evaluation_kind": "live_provider_quality",
+        "dataset_version": "adversarial-live-v1",
+        "metrics": {
+          "precision": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "answerable_coverage": {
+            "numerator": 5,
+            "denominator": 6,
+            "value": 0.8333333333333334
+          },
+          "evidence_correctness": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "traceability": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "unsupported_proposal_rate": {
+            "numerator": 0,
+            "denominator": 6,
+            "value": 0.0
+          },
+          "abstention": {
+            "numerator": 24,
+            "denominator": 24,
+            "value": 1.0
+          },
+          "conflict_detection": {
+            "numerator": 1,
+            "denominator": 1,
+            "value": 1.0
+          },
+          "retrieval_recall": {
+            "numerator": 5,
+            "denominator": 5,
+            "value": 1.0
+          },
+          "ready_rate": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "failure_rate": {
+            "numerator": 0,
+            "denominator": 6,
+            "value": 0.0
+          }
+        },
+        "counts": {
+          "excluded_candidates": 25,
+          "proposals": 6,
+          "runs": 6,
+          "ready_runs": 6,
+          "failed_runs": 0,
+          "correct_proposals": 6,
+          "wrong_identity": 0,
+          "traceable_proposals": 6,
+          "correct_evidence": 6,
+          "unsupported_proposals": 0,
+          "attribute_checks": 30,
+          "answerable_fields": 6,
+          "correctly_covered_fields": 5,
+          "unknown_fields": 24,
+          "correct_abstentions": 24,
+          "retrieval_expected": 5,
+          "retrieval_found": 5,
+          "expected_conflicts": 1,
+          "detected_conflicts": 1
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "conflict_detection": true,
+          "identity": true
+        },
+        "passed": true,
+        "unmeasured": [],
+        "cases": [
+          {
+            "id": "EV-101",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "EV-102",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          },
+          {
+            "id": "EV-103",
+            "status": "waiting_review",
+            "proposals": 0,
+            "correct": 0,
+            "error": null
+          },
+          {
+            "id": "EV-104",
+            "status": "waiting_review",
+            "proposals": 0,
+            "correct": 0,
+            "error": null
+          },
+          {
+            "id": "EV-105",
+            "status": "waiting_review",
+            "proposals": 0,
+            "correct": 0,
+            "error": null
+          },
+          {
+            "id": "EV-106",
+            "status": "waiting_review",
+            "proposals": 1,
+            "correct": 1,
+            "error": null
+          }
+        ],
+        "latency_median_seconds": 3.6315,
+        "note": "Scores are measured before human review. Null metrics are not passes. A small single-manufacturer corpus does not establish general model quality."
+      }
+    },
+    "holdout": {
+      "execution": {
+        "stage": "holdout",
+        "completed": true,
+        "passed": true,
+        "counts": {
+          "excluded_candidates": 12,
+          "proposals": 38,
+          "runs": 10,
+          "ready_runs": 10,
+          "failed_runs": 0,
+          "correct_proposals": 37,
+          "wrong_identity": 0,
+          "traceable_proposals": 38,
+          "correct_evidence": 37,
+          "unsupported_proposals": 1,
+          "attribute_checks": 50,
+          "answerable_fields": 39,
+          "correctly_covered_fields": 37,
+          "unknown_fields": 11,
+          "correct_abstentions": 10,
+          "retrieval_expected": 10,
+          "retrieval_found": 10
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "identity": true
+        },
+        "elapsed_seconds": 213.296,
+        "worker_running": false,
+        "calls": 60,
+        "metered_usd": 0.020334,
+        "unknown_usage_calls": 0
+      },
+      "score": {
+        "evaluation_kind": "live_provider_quality",
+        "dataset_version": "portwest-real-v1",
+        "metrics": {
+          "precision": {
+            "numerator": 37,
+            "denominator": 38,
+            "value": 0.9736842105263158
+          },
+          "answerable_coverage": {
+            "numerator": 37,
+            "denominator": 39,
+            "value": 0.9487179487179487
+          },
+          "evidence_correctness": {
+            "numerator": 37,
+            "denominator": 38,
+            "value": 0.9736842105263158
+          },
+          "traceability": {
+            "numerator": 38,
+            "denominator": 38,
+            "value": 1.0
+          },
+          "unsupported_proposal_rate": {
+            "numerator": 1,
+            "denominator": 38,
+            "value": 0.02631578947368421
+          },
+          "abstention": {
+            "numerator": 10,
+            "denominator": 11,
+            "value": 0.9090909090909091
+          },
+          "conflict_detection": {
+            "numerator": 0,
+            "denominator": 0,
+            "value": null
+          },
+          "retrieval_recall": {
+            "numerator": 10,
+            "denominator": 10,
+            "value": 1.0
+          },
+          "ready_rate": {
+            "numerator": 10,
+            "denominator": 10,
+            "value": 1.0
+          },
+          "failure_rate": {
+            "numerator": 0,
+            "denominator": 10,
+            "value": 0.0
+          }
+        },
+        "counts": {
+          "excluded_candidates": 12,
+          "proposals": 38,
+          "runs": 10,
+          "ready_runs": 10,
+          "failed_runs": 0,
+          "correct_proposals": 37,
+          "wrong_identity": 0,
+          "traceable_proposals": 38,
+          "correct_evidence": 37,
+          "unsupported_proposals": 1,
+          "attribute_checks": 50,
+          "answerable_fields": 39,
+          "correctly_covered_fields": 37,
+          "unknown_fields": 11,
+          "correct_abstentions": 10,
+          "retrieval_expected": 10,
+          "retrieval_found": 10
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "identity": true
+        },
+        "passed": true,
+        "unmeasured": [],
+        "cases": [
+          {
+            "id": "A611",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A621",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A622",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A625",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A626",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A630",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "A631",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A632",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A636",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 4,
+            "error": null
+          },
+          {
+            "id": "A637",
+            "status": "waiting_review",
+            "proposals": 4,
+            "correct": 3,
+            "error": null
+          }
+        ],
+        "latency_median_seconds": 5.218999999999999,
+        "note": "Scores are measured before human review. Null metrics are not passes. A small single-manufacturer corpus does not establish general model quality."
+      }
+    },
+    "adversarial-holdout": {
+      "execution": {
+        "stage": "adversarial-holdout",
+        "completed": true,
+        "passed": true,
+        "counts": {
+          "excluded_candidates": 25,
+          "proposals": 6,
+          "runs": 6,
+          "ready_runs": 6,
+          "failed_runs": 0,
+          "correct_proposals": 6,
+          "wrong_identity": 0,
+          "traceable_proposals": 6,
+          "correct_evidence": 6,
+          "unsupported_proposals": 0,
+          "attribute_checks": 30,
+          "answerable_fields": 6,
+          "correctly_covered_fields": 5,
+          "unknown_fields": 24,
+          "correct_abstentions": 24,
+          "retrieval_expected": 5,
+          "retrieval_found": 5,
+          "expected_conflicts": 1,
+          "detected_conflicts": 1
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "conflict_detection": true,
+          "identity": true
+        },
+        "elapsed_seconds": 55.586,
+        "worker_running": false,
+        "calls": 24,
+        "metered_usd": 0.002699,
+        "unknown_usage_calls": 0
+      },
+      "score": {
+        "evaluation_kind": "live_provider_quality",
+        "dataset_version": "adversarial-live-v1",
+        "metrics": {
+          "precision": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "answerable_coverage": {
+            "numerator": 5,
+            "denominator": 6,
+            "value": 0.8333333333333334
+          },
+          "evidence_correctness": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "traceability": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "unsupported_proposal_rate": {
+            "numerator": 0,
+            "denominator": 6,
+            "value": 0.0
+          },
+          "abstention": {
+            "numerator": 24,
+            "denominator": 24,
+            "value": 1.0
+          },
+          "conflict_detection": {
+            "numerator": 1,
+            "denominator": 1,
+            "value": 1.0
+          },
+          "retrieval_recall": {
+            "numerator": 5,
+            "denominator": 5,
+            "value": 1.0
+          },
+          "ready_rate": {
+            "numerator": 6,
+            "denominator": 6,
+            "value": 1.0
+          },
+          "failure_rate": {
+            "numerator": 0,
+            "denominator": 6,
+            "value": 0.0
+          }
+        },
+        "counts": {
+          "excluded_candidates": 25,
+          "proposals": 6,
+          "runs": 6,
+          "ready_runs": 6,
+          "failed_runs": 0,
+          "correct_proposals": 6,
+          "wrong_identity": 0,
+          "traceable_proposals": 6,
+          "correct_evidence": 6,
+          "unsupported_proposals": 0,
+          "attribute_checks": 30,
+          "answerable_fields": 6,
+          "correctly_covered_fields": 5,
+          "unknown_fields": 24,
+          "correct_abstentions": 24,
+          "retrieval_expected": 5,
+          "retrieval_found": 5,
+          "expected_conflicts": 1,
+          "detected_conflicts": 1
+        },
+        "gates": {
+          "precision": true,
+          "answerable_coverage": true,
+          "traceability": true,
+          "abstention": true,
+          "ready_rate": true,
+          "conflict_detection": true,
+          "identity": true
+        },
+        "passed": true,
+        "unmeasured": [],
+        "cases": [
+          {
+            "id": "EV-201",
+            "status": "waiting_review",
+            "proposals": 3,
+            "correct": 3,
+            "error": null
+          },
+          {
+            "id": "EV-202",
+            "status": "waiting_review",
+            "proposals": 2,
+            "correct": 2,
+            "error": null
+          },
+          {
+            "id": "EV-203",
+            "status": "waiting_review",
+            "proposals": 0,
+            "correct": 0,
+            "error": null
+          },
+          {
+            "id": "EV-204",
+            "status": "waiting_review",
+            "proposals": 0,
+            "correct": 0,
+            "error": null
+          },
+          {
+            "id": "EV-205",
+            "status": "waiting_review",
+            "proposals": 0,
+            "correct": 0,
+            "error": null
+          },
+          {
+            "id": "EV-206",
+            "status": "waiting_review",
+            "proposals": 1,
+            "correct": 1,
+            "error": null
+          }
+        ],
+        "latency_median_seconds": 3.0324999999999998,
+        "note": "Scores are measured before human review. Null metrics are not passes. A small single-manufacturer corpus does not establish general model quality."
+      }
+    }
+  },
+  "offline_revalidation": {
+    "evaluation_kind": "offline_revalidation_of_saved_live_outputs",
+    "dataset_version": "portwest-real-v1",
+    "metrics": {
+      "precision": {
+        "numerator": 66,
+        "denominator": 66,
+        "value": 1.0
+      },
+      "answerable_coverage": {
+        "numerator": 66,
+        "denominator": 71,
+        "value": 0.9295774647887324
+      },
+      "evidence_correctness": {
+        "numerator": 66,
+        "denominator": 66,
+        "value": 1.0
+      },
+      "traceability": {
+        "numerator": 66,
+        "denominator": 66,
+        "value": 1.0
+      },
+      "unsupported_proposal_rate": {
+        "numerator": 0,
+        "denominator": 66,
+        "value": 0.0
+      },
+      "abstention": {
+        "numerator": 29,
+        "denominator": 29,
+        "value": 1.0
+      },
+      "conflict_detection": {
+        "numerator": 0,
+        "denominator": 0,
+        "value": null
+      },
+      "retrieval_recall": {
+        "numerator": 20,
+        "denominator": 20,
+        "value": 1.0
+      },
+      "ready_rate": {
+        "numerator": 20,
+        "denominator": 20,
+        "value": 1.0
+      },
+      "failure_rate": {
+        "numerator": 0,
+        "denominator": 20,
+        "value": 0.0
+      }
+    },
+    "counts": {
+      "excluded_candidates": 34,
+      "proposals": 66,
+      "runs": 20,
+      "ready_runs": 20,
+      "failed_runs": 0,
+      "correct_proposals": 66,
+      "wrong_identity": 0,
+      "traceable_proposals": 66,
+      "correct_evidence": 66,
+      "unsupported_proposals": 0,
+      "attribute_checks": 100,
+      "answerable_fields": 71,
+      "correctly_covered_fields": 66,
+      "unknown_fields": 29,
+      "correct_abstentions": 29,
+      "retrieval_expected": 20,
+      "retrieval_found": 20
+    },
+    "gates": {
+      "precision": true,
+      "answerable_coverage": true,
+      "traceability": true,
+      "abstention": true,
+      "ready_rate": true,
+      "identity": true
+    },
+    "passed": true,
+    "unmeasured": [],
+    "cases": [
+      {
+        "id": "A040",
+        "status": "waiting_review",
+        "proposals": 3,
+        "correct": 3,
+        "error": null
+      },
+      {
+        "id": "A060",
+        "status": "waiting_review",
+        "proposals": 1,
+        "correct": 1,
+        "error": null
+      },
+      {
+        "id": "A106",
+        "status": "waiting_review",
+        "proposals": 3,
+        "correct": 3,
+        "error": null
+      },
+      {
+        "id": "A110",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A111",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A120",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A123",
+        "status": "waiting_review",
+        "proposals": 3,
+        "correct": 3,
+        "error": null
+      },
+      {
+        "id": "A130",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A140",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A145",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A146",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A148",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A150",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A195",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A198",
+        "status": "waiting_review",
+        "proposals": 4,
+        "correct": 4,
+        "error": null
+      },
+      {
+        "id": "A210",
+        "status": "waiting_review",
+        "proposals": 2,
+        "correct": 2,
+        "error": null
+      },
+      {
+        "id": "A220",
+        "status": "waiting_review",
+        "proposals": 2,
+        "correct": 2,
+        "error": null
+      },
+      {
+        "id": "A260",
+        "status": "waiting_review",
+        "proposals": 3,
+        "correct": 3,
+        "error": null
+      },
+      {
+        "id": "A261",
+        "status": "waiting_review",
+        "proposals": 3,
+        "correct": 3,
+        "error": null
+      },
+      {
+        "id": "A304",
+        "status": "waiting_review",
+        "proposals": 2,
+        "correct": 2,
+        "error": null
+      }
+    ],
+    "latency_median_seconds": 5.0385,
+    "note": "Offline validation of previously recorded live outputs; not a new provider run. Original live observations and scores remain unchanged.",
+    "additional_paid_calls": 0,
+    "rejected_by_context_guard": [
+      {
+        "case": "A040",
+        "attribute": "length_mm",
+        "value": 61.0
+      }
+    ]
+  },
+  "acceptance_journeys": {
+    "development-confirmation": {
+      "passed": true,
+      "stage": "development-confirmation",
+      "operator": "automated acceptance exercise",
+      "independent_human_review": false,
+      "products": 20,
+      "review_decisions": 20,
+      "approved_fields": 66,
+      "conflict_choices": 0,
+      "originals_preserved": true,
+      "unapproved_exported": 0,
+      "idempotency_verified": true,
+      "old_export_immutable": true,
+      "provider_calls_added": 0,
+      "before_export_id": "f1731760-041b-4d42-936b-dd294f228d8f",
+      "after_export_id": "025c0efb-5c9a-419c-9e95-fb931167c22b",
+      "after_export_sha256": "d2929284a012364b9cc0f3c23aaafed3be86e48b8eadc9430fd54f4312133245",
+      "database_api_restart_verified": true
+    },
+    "adversarial-development": {
+      "passed": true,
+      "stage": "adversarial-development",
+      "operator": "automated acceptance exercise",
+      "independent_human_review": false,
+      "products": 6,
+      "review_decisions": 6,
+      "approved_fields": 5,
+      "conflict_choices": 1,
+      "originals_preserved": true,
+      "unapproved_exported": 0,
+      "idempotency_verified": true,
+      "old_export_immutable": true,
+      "provider_calls_added": 0,
+      "before_export_id": "824b6807-b550-47cc-a7ac-98971e07748d",
+      "after_export_id": "6e8c236a-28a1-4397-9094-f23f4e38af24",
+      "after_export_sha256": "d5ef698cc7f47b991bb9fe31752de6260aa2747a9c10dcc461ee68248894b13d"
+    }
+  },
+  "checks": {
+    "backend": 117,
+    "frontend_unit": 6,
+    "browser_journeys": 6,
+    "total_automated": 129,
+    "clean_locked_install": true,
+    "build_types_lint": true,
+    "fixture_products": 50,
+    "fixture_attribute_checks": 300,
+    "guided_products": 12,
+    "guided_checks": 19,
+    "abrupt_worker_recovery": true,
+    "recovery_seconds": 47.36,
+    "python_dependencies_audited": 77,
+    "known_python_vulnerabilities": 0,
+    "known_frontend_runtime_vulnerabilities": 0,
+    "main_integrity": {
+      "passed": true,
+      "source_hashes_preserved": 22,
+      "counts": {
+        "products": {
+          "before": 73,
+          "after": 73
+        },
+        "source_documents": {
+          "before": 22,
+          "after": 22
+        },
+        "chunks": {
+          "before": 166,
+          "after": 166
+        },
+        "candidates": {
+          "before": 78,
+          "after": 78
+        },
+        "evidence": {
+          "before": 66,
+          "after": 66
+        },
+        "reviews": {
+          "before": 10,
+          "after": 10
+        },
+        "exports": {
+          "before": 0,
+          "after": 0
+        },
+        "product_runs": {
+          "before": 29,
+          "after": 29
+        }
+      }
+    },
+    "secret_audit": {
+      "history_blobs_scanned": 291,
+      "commits": 6,
+      "history_findings": [],
+      "tracked_findings": [],
+      "ignored": {
+        ".env": true,
+        ".env.pilot": true,
+        ".env.local": true,
+        ".env.production": true,
+        ".local/real-corpus/test.pdf": true
+      },
+      "examples_tracked": true,
+      "remotes": [],
+      "branch": "prepare-real-ai",
+      "passed": true
+    },
+    "presentation_desktop_mobile_rechecked": true,
+    "presentation_build_rechecked": true,
+    "ci_action_references_verified": {
+      "checkout": "https://github.com/actions/checkout/releases/tag/v7.0.1",
+      "setup_node": "https://github.com/actions/setup-node/releases/tag/v7.0.0"
+    }
+  },
+  "cost": {
+    "prior_pilots_metered_usd": 0.005477,
+    "this_completion_metered_usd": 0.101206,
+    "total_metered_usd": 0.106683,
+    "authorized_usd": 0.25,
+    "basis": "Persisted provider-reported token usage and configured prices, rounded conservatively per request; provider invoice not inspected"
+  },
+  "limitations": [
+    "One manufacturer and one product category; small holdout.",
+    "Labels and acceptance decisions have no independent human expert review.",
+    "Development included adjustments; held-out sets ran once with frozen application code.",
+    "Offline revalidation is not another live provider run.",
+    "Known omissions in both live adversarial unit-conversion cases (EV-105 and EV-205).",
+    "Held-out error: A637 inner_pack_count=12 cited an ambiguous Dipping: :12 fragment; no explicit inner-pack label supports it."
+  ]
+}

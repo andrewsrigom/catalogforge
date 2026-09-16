@@ -1,0 +1,100 @@
+name: CatalogForge verification
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_DB: catalogforge
+          POSTGRES_USER: catalogforge
+          POSTGRES_PASSWORD: catalogforge-local
+        ports: ['5488:5432']
+        options: >-
+          --health-cmd "pg_isready -U catalogforge"
+          --health-interval 3s --health-timeout 3s --health-retries 20
+    env:
+      AI_MODE: fixture
+      DATABASE_URL: postgresql+psycopg://catalogforge:catalogforge-local@localhost:5488/catalogforge
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4
+        with:
+          version: 0.10.9
+          python-version: '3.12'
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: uv sync --frozen
+      - run: npm ci
+        working-directory: apps/web
+      - name: Lint and Python types
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run mypy
+      - name: Generated API types and frontend checks
+        run: |
+          uv run python -m catalogforge.cli openapi
+          npm --prefix apps/web run generate:api
+          git diff --exit-code -- apps/web/openapi.json apps/web/src/api/schema.d.ts
+          npm --prefix apps/web run build
+          npm --prefix apps/web test
+      - name: Start application
+        run: |
+          uv run python -m catalogforge.cli init
+          uv run python scripts/dev.py start
+          uv run python scripts/wait_ready.py
+      - name: PostgreSQL integration and restart tests
+        run: |
+          uv run pytest -q --junitxml=.local/pytest.xml
+          uv run python scripts/smoke.py
+      - name: Browser acceptance
+        run: |
+          uv run python scripts/prepare_browser.py
+          cd apps/web
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+      - name: Fixture evaluation
+        run: |
+          uv run python evals/evaluate.py --output .local/evaluation.json
+          uv run python evals/evaluate_workday.py --output .local/evaluation-workday.json
+      - name: Clean up disposable browser identity
+        if: always()
+        run: |
+          if [ -f .local/browser-workspace.json ]; then
+            uv run python scripts/cleanup_browser.py
+          fi
+      - name: Stop local processes
+        if: always()
+        run: uv run python scripts/dev.py stop
+
+  recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4
+        with:
+          version: 0.10.9
+          python-version: '3.12'
+      - run: uv sync --frozen
+      - name: Start the complete Compose stack
+        run: docker compose up --build -d --wait
+      - name: Verify abrupt worker recovery
+        run: |
+          uv run python scripts/wait_ready.py
+          uv run python scripts/verify_recovery.py
+      - name: Stop the Compose stack
+        if: always()
+        run: docker compose down

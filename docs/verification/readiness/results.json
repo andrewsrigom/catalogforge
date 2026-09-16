@@ -1,0 +1,135 @@
+{
+  "date": "2026-09-16",
+  "milestone": "ready_to_activate_ai",
+  "baseline_commit": "7b4f42c",
+  "branch": "prepare-real-ai",
+  "scope_completed": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "live_pilot_and_quality_pending": [
+    5,
+    6
+  ],
+  "tests": {
+    "pytest": 84,
+    "vitest": 6,
+    "playwright": 6,
+    "total": 96,
+    "pytest_seconds": 107.436
+  },
+  "static_checks": {
+    "ruff": true,
+    "ruff_format": true,
+    "mypy": true,
+    "frontend_build": true,
+    "container_build": true
+  },
+  "corpus": {
+    "sources": 30,
+    "products": 30,
+    "attribute_checks": 150,
+    "checks_by_split": {
+      "development": 100,
+      "holdout": 50
+    },
+    "paid_calls": 0
+  },
+  "adversarial_supplement": {
+    "sources": 14,
+    "products": 12,
+    "attribute_checks": 60,
+    "checks_by_split": {
+      "development": 30,
+      "holdout": 30
+    },
+    "paid_calls": 0
+  },
+  "pilot": {
+    "status": "passed",
+    "separate_workspace": true,
+    "empty_products_and_sources": true,
+    "mode": "real",
+    "provider_ready": false,
+    "worker_running": false,
+    "recorded_provider_calls": 0,
+    "running_services": [
+      "api",
+      "db",
+      "web"
+    ]
+  },
+  "recovery": {
+    "status": "passed",
+    "project": "catalogforge-restore-ready-final",
+    "sources_opened": true,
+    "saved_checkpoint_loaded": true,
+    "saved_review_resumed": true,
+    "revision_increment": 1,
+    "original_product_candidates_and_run_unchanged": true,
+    "source_hashes_verified": 22,
+    "inventory_matches": true,
+    "table_counts": {
+      "checkpoints.checkpoint_blobs": 631,
+      "checkpoints.checkpoint_migrations": 10,
+      "checkpoints.checkpoint_writes": 1329,
+      "checkpoints.checkpoints": 468,
+      "public.alembic_version": 1,
+      "public.audit_events": 105,
+      "public.auth_sessions": 36,
+      "public.batches": 24,
+      "public.candidates": 78,
+      "public.catalog_imports": 13,
+      "public.categories": 13,
+      "public.chunks": 166,
+      "public.evidence": 66,
+      "public.exports": 0,
+      "public.memberships": 26,
+      "public.outbox": 61,
+      "public.procrastinate_events": 183,
+      "public.procrastinate_jobs": 61,
+      "public.procrastinate_periodic_defers": 0,
+      "public.procrastinate_workers": 0,
+      "public.product_revisions": 9,
+      "public.product_runs": 29,
+      "public.products": 73,
+      "public.provider_budgets": 0,
+      "public.provider_calls": 0,
+      "public.reviews": 10,
+      "public.schema_versions": 13,
+      "public.source_documents": 22,
+      "public.users": 10,
+      "public.worker_heartbeats": 3,
+      "public.workflow_events": 386,
+      "public.workspaces": 21
+    },
+    "runtime_images": {
+      "api": "sha256:26c8440c1229daa274f77f6e75071f24ababe19c55510f030cc27d1aa1f23f1f",
+      "worker": "sha256:57698c2a65793367f35cfe0c97fbeaaabad9daf53bc637fd077d33e4a14fd9f2"
+    },
+    "backup_captured_before_final_commit": true
+  },
+  "versions": {
+    "fastapi": "0.141.1",
+    "sqlalchemy": "2.0.54",
+    "langchain": "1.4.0",
+    "langchain-openai": "1.6.2",
+    "langgraph": "1.2.11",
+    "langgraph-checkpoint-postgres": "3.1.2",
+    "procrastinate": "3.9.0",
+    "psycopg": "3.3.5",
+    "pypdf": "6.18.1",
+    "python": "3.13.12",
+    "node": "v24.19.0"
+  },
+  "sha256": {
+    "uv.lock": "8c3f49cedc3d2aada8b8259911ab7d9b85484b5561c941cdc8e70afb63b6cfa3",
+    "apps/web/package-lock.json": "2257c728458371947019092e521508fde05cd055a48ff2ff0e6ba52a728b592c",
+    "evals/real/dataset-v1.json": "d97df86503901b424b01cb3240b75cbe628fa97a7a193023ece6123310a8aa96",
+    "evals/real/adversarial-v1.json": "070d5dde75b3ad8646245be7cdf8294901b30eb4a4334d84765d487aafbc64fe"
+  },
+  "paid_calls": 0,
+  "live_model_quality_measured": false
+}

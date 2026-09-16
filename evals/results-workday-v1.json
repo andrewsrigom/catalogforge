@@ -1,0 +1,176 @@
+{
+  "evaluation_kind": "deterministic_fixture_integration",
+  "dataset": "northstar-workday-v1",
+  "products": 12,
+  "attribute_checks": 19,
+  "passed_checks": 19,
+  "evidence_links_verified": 17,
+  "wall_seconds": 23.881,
+  "live_model_evaluation": false,
+  "paid_model_calls": 0,
+  "token_usage": null,
+  "cost": null,
+  "failures": [],
+  "cases": [
+    {
+      "sku": "NS-001",
+      "run_id": "1b4daa2b-a85e-43ab-ad4b-106eb676752d",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        },
+        {
+          "attribute": "length_mm",
+          "passed": true
+        },
+        {
+          "attribute": "pack_quantity",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-002",
+      "run_id": "ebc1f4a7-dd8e-44ef-8c6e-d568b2ef262e",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "length_mm",
+          "passed": true
+        },
+        {
+          "attribute": "touchscreen",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-003",
+      "run_id": "3fa8716b-48bd-4b08-9f6d-e827f43218c9",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        },
+        {
+          "attribute": "pack_quantity",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-004",
+      "run_id": "3cbf55d8-fcc6-4d09-9d36-bc9a5ab9bcc5",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        },
+        {
+          "attribute": "pack_quantity",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-005",
+      "run_id": "b13680b8-dcee-4edc-a79c-5d4aa7b540ee",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "pack_quantity",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-006",
+      "run_id": "cd0ef2f5-4f64-49b4-a2a7-1466fa45a21a",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-007",
+      "run_id": "b1696fab-c355-4d86-af67-586f77d99ff8",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "length_mm",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-008",
+      "run_id": "ba1eccaa-077c-40e1-871a-5ba9ab3fb254",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-009",
+      "run_id": "cb6f801d-2cf8-4120-b712-e76548e7876f",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        },
+        {
+          "attribute": "pack_quantity",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-010",
+      "run_id": "1c0a3433-586b-4676-9004-5663d24e2246",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "certification",
+          "passed": true
+        },
+        {
+          "attribute": "touchscreen",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-011",
+      "run_id": "12c8341a-a70d-48c9-a8cb-345abb74200a",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "pack_quantity",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "sku": "NS-012",
+      "run_id": "749299a3-ff0e-457a-a845-3af64b330dc1",
+      "status": "waiting_review",
+      "checks": [
+        {
+          "attribute": "material",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

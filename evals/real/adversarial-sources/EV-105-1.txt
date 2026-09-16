@@ -1,0 +1,5 @@
+Synthetic adversarial supplement; not a manufacturer specification.
+Manufacturer: EvalWorks
+Model: EV-105
+MPN: EV-105
+length_mm: 9.5 in

@@ -1,0 +1,411 @@
+{
+  "evaluation_kind": "deterministic_fixture_integration",
+  "not_a_live_model_quality_evaluation": true,
+  "dataset_version": "1.0",
+  "dataset_products": 50,
+  "labeled_attribute_cases": 300,
+  "prompt_version": "catalogforge-extraction-v1",
+  "configuration": {
+    "mode": "fixture",
+    "chat": "deterministic-v1",
+    "embedding_space": "fixture:hash-v1:64"
+  },
+  "metrics": {
+    "product_identity_correctness": 1.0,
+    "retrieval_recall": 1.0,
+    "attribute_correctness": 1.0,
+    "evidence_correctness": 1.0,
+    "unsupported_proposal_rate": 0.0,
+    "correct_abstention": 1.0,
+    "conflict_detection": 1.0,
+    "workflow_ready_for_review_rate": 1.0,
+    "workflow_failure_rate": 0.0,
+    "workflow_completed_after_approval_rate": null
+  },
+  "counts": {
+    "identity_correct": 229,
+    "identity_total": 229,
+    "retrieval_found": 46,
+    "retrieval_expected": 46,
+    "attribute_correct": 300,
+    "attribute_total": 300,
+    "evidence_correct": 229,
+    "evidence_total": 229,
+    "unsupported_proposals": 0,
+    "proposals": 225,
+    "abstention_correct": 76,
+    "abstention_expected": 76,
+    "conflicts_detected": 1,
+    "conflicts_expected": 1
+  },
+  "completeness": {
+    "mean_required_fields_populated_percent": 33.634,
+    "note": "Measured before review; separate from correctness."
+  },
+  "latency": {
+    "wall_seconds": 21.909,
+    "median_product_seconds": 0.46399999999999997,
+    "max_product_seconds": 0.986
+  },
+  "token_usage": null,
+  "model_calls": 0,
+  "cost": null,
+  "cost_note": "Unavailable: no provider calls or pricing configured.",
+  "cases": [
+    {
+      "sku": "CF-0001",
+      "scenario": "supported",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.877
+    },
+    {
+      "sku": "CF-0002",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.919
+    },
+    {
+      "sku": "CF-0003",
+      "scenario": "conflict",
+      "state": "waiting_review",
+      "proposals": 7,
+      "latency_seconds": 0.986
+    },
+    {
+      "sku": "CF-0004",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.78
+    },
+    {
+      "sku": "CF-0005",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.737
+    },
+    {
+      "sku": "CF-0006",
+      "scenario": "uncertain_packaging",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.728
+    },
+    {
+      "sku": "CF-0007",
+      "scenario": "populated_contradiction",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.419
+    },
+    {
+      "sku": "CF-0008",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.425
+    },
+    {
+      "sku": "CF-0009",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.574
+    },
+    {
+      "sku": "CF-0010",
+      "scenario": "prompt_injection",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.6
+    },
+    {
+      "sku": "CF-0011",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.917
+    },
+    {
+      "sku": "CF-0012",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.83
+    },
+    {
+      "sku": "CF-0013",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.58
+    },
+    {
+      "sku": "CF-0014",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.741
+    },
+    {
+      "sku": "CF-0015",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.857
+    },
+    {
+      "sku": "CF-0016",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.679
+    },
+    {
+      "sku": "CF-0017",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.554
+    },
+    {
+      "sku": "CF-0018",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.515
+    },
+    {
+      "sku": "CF-0019",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.519
+    },
+    {
+      "sku": "CF-0020",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.492
+    },
+    {
+      "sku": "CF-0021",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.415
+    },
+    {
+      "sku": "CF-0022",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.395
+    },
+    {
+      "sku": "CF-0023",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.357
+    },
+    {
+      "sku": "CF-0024",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.381
+    },
+    {
+      "sku": "CF-0025",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.398
+    },
+    {
+      "sku": "CF-0026",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.266
+    },
+    {
+      "sku": "CF-0027",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.524
+    },
+    {
+      "sku": "CF-0028",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.493
+    },
+    {
+      "sku": "CF-0029",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.337
+    },
+    {
+      "sku": "CF-0030",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.34
+    },
+    {
+      "sku": "CF-0031",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.344
+    },
+    {
+      "sku": "CF-0032",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.343
+    },
+    {
+      "sku": "CF-0033",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.305
+    },
+    {
+      "sku": "CF-0034",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.307
+    },
+    {
+      "sku": "CF-0035",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.365
+    },
+    {
+      "sku": "CF-0036",
+      "scenario": "missing_evidence",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.334
+    },
+    {
+      "sku": "CF-0037",
+      "scenario": "missing_evidence",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.314
+    },
+    {
+      "sku": "CF-0038",
+      "scenario": "missing_evidence",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.345
+    },
+    {
+      "sku": "CF-0039",
+      "scenario": "missing_evidence",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.348
+    },
+    {
+      "sku": "CF-0040",
+      "scenario": "missing_evidence",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.314
+    },
+    {
+      "sku": "CF-0041",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.365
+    },
+    {
+      "sku": "CF-0042",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.352
+    },
+    {
+      "sku": "CF-0043",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.441
+    },
+    {
+      "sku": "CF-0044",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.487
+    },
+    {
+      "sku": "CF-0045",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.554
+    },
+    {
+      "sku": "CF-0046",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.626
+    },
+    {
+      "sku": "CF-0047",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.508
+    },
+    {
+      "sku": "CF-0048",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.538
+    },
+    {
+      "sku": "CF-0049",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.409
+    },
+    {
+      "sku": "CF-0050",
+      "scenario": "unit_conversion",
+      "state": "waiting_review",
+      "proposals": 6,
+      "latency_seconds": 0.361
+    }
+  ],
+  "limitations": [
+    "Fixture behavior is deterministic and tailored to explicit synthetic records.",
+    "Live provider quality has not been evaluated.",
+    "Workflow completion after human decisions is verified separately by acceptance tests."
+  ]
+}

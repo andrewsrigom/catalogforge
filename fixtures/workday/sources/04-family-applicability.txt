@@ -1,0 +1,10 @@
+Dataset: Synthetic CatalogForge fixture v1
+Manufacturer: Northstar Safety
+Model: FF-500
+Coating: PU
+Material: Nylon
+Qty per box: 12 pairs
+Touchscreen: yes
+Scope: family
+Applicable sizes: M,L
+Scope note: Material and coating apply to the explicitly listed sizes only.

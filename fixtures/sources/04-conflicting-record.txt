@@ -1,0 +1,11 @@
+Dataset: Synthetic CatalogForge fixture v1
+Manufacturer: ForgeWorks
+Model: FG-100
+MPN: FG-100-M-N
+Size: M
+Coating: Nitrile
+Material: Leather
+Length: 25 cm
+Qty per box: 12 pairs
+Cut level: A1
+Touchscreen: no

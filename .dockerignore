@@ -1,0 +1,12 @@
+.git
+.venv
+**/node_modules
+**/dist
+apps/web/public/pdfjs
+data
+.local
+.env
+.env.*
+**/.env
+**/.env.*
+**/__pycache__

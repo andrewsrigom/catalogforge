@@ -1,0 +1,52 @@
+name: catalogforge-pilot
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: catalogforge
+      POSTGRES_USER: catalogforge
+      POSTGRES_PASSWORD: catalogforge-local
+    volumes: ["postgres:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U catalogforge"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  init:
+    image: catalogforge-api
+    env_file: [{path: .env.pilot, required: false}]
+    environment: &env
+      DATABASE_URL: postgresql+psycopg://catalogforge:catalogforge-local@db:5432/catalogforge
+      STORAGE_ROOT: /data/uploads
+      WEB_ORIGIN: http://localhost:5388
+    volumes: ["uploads:/data/uploads"]
+    command: ["uv", "run", "--no-sync", "python", "-m", "catalogforge.cli", "init-pilot"]
+    depends_on: {db: {condition: service_healthy}}
+  api:
+    image: catalogforge-api
+    env_file: [{path: .env.pilot, required: false}]
+    environment: *env
+    volumes: ["uploads:/data/uploads"]
+    command: ["uv", "run", "--no-sync", "uvicorn", "catalogforge.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports: ["127.0.0.1:8388:8000"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    depends_on: {init: {condition: service_completed_successfully}}
+  worker:
+    image: catalogforge-worker
+    profiles: ["live"]
+    env_file: [{path: .env.pilot, required: false}]
+    environment: *env
+    volumes: ["uploads:/data/uploads"]
+    command: ["uv", "run", "--no-sync", "python", "-m", "catalogforge.worker"]
+    depends_on: {init: {condition: service_completed_successfully}}
+  web:
+    image: catalogforge-web
+    ports: ["127.0.0.1:5388:80"]
+    depends_on: {api: {condition: service_healthy}}
+volumes:
+  postgres:
+  uploads:

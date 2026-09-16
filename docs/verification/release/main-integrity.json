@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "source_hashes_preserved": 22,
+  "counts": {
+    "products": {
+      "before": 73,
+      "after": 73
+    },
+    "source_documents": {
+      "before": 22,
+      "after": 22
+    },
+    "chunks": {
+      "before": 166,
+      "after": 166
+    },
+    "candidates": {
+      "before": 78,
+      "after": 78
+    },
+    "evidence": {
+      "before": 66,
+      "after": 66
+    },
+    "reviews": {
+      "before": 10,
+      "after": 10
+    },
+    "exports": {
+      "before": 0,
+      "after": 0
+    },
+    "product_runs": {
+      "before": 29,
+      "after": 29
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Synthetic adversarial supplement; not a manufacturer specification.
+Manufacturer: EvalWorks
+Model: EV-103
+MPN: EV-103
+No specifications are stated in this record.

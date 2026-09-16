@@ -1,0 +1,10 @@
+{
+  "sources": 30,
+  "products": 30,
+  "attribute_checks": 150,
+  "checks_by_split": {
+    "development": 100,
+    "holdout": 50
+  },
+  "paid_calls": 0
+}

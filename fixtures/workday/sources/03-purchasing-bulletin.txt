@@ -1,0 +1,11 @@
+Dataset: Synthetic CatalogForge fixture v1
+Manufacturer: Northstar Safety
+Model: WG-440
+MPN: WG-440-M-NITRILE
+Size: M
+Coating: Nitrile
+Material: Polyester
+Length: 26 cm
+Qty per box: 6 pairs
+Touchscreen: no
+Supplier note: Conflicts with the distributor sheet. No source has priority by default.

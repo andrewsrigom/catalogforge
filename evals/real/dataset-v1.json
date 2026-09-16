@@ -1,0 +1,2791 @@
+{
+  "version": "portwest-real-v1",
+  "kind": "real_manufacturer_documents",
+  "review_status": "source-reviewed: all 30 first pages visually inspected and each citation checked in the original extracted text; no model outputs used as labels",
+  "category": {
+    "name": "Work gloves \u00b7 real evaluation",
+    "identity_fields": [
+      "manufacturer",
+      "model"
+    ],
+    "attributes": [
+      {
+        "key": "material",
+        "label": "Liner materials",
+        "type": "string",
+        "description": "Material composition explicitly listed under Materials; preserve all listed components. Exclude the separate dipping/coating field."
+      },
+      {
+        "key": "inner_pack_count",
+        "label": "Declared inner pack count",
+        "type": "number",
+        "minimum": 0,
+        "description": "Number explicitly labeled Inner Pack. Do not interpret as pairs, pieces or boxes beyond what the source states."
+      },
+      {
+        "key": "outer_carton_count",
+        "label": "Declared outer carton count",
+        "type": "number",
+        "minimum": 0,
+        "description": "Number explicitly labeled Outer Carton. Do not substitute dimensions or convert between packaging levels."
+      },
+      {
+        "key": "gauge",
+        "label": "Liner gauge",
+        "type": "number",
+        "minimum": 1,
+        "description": "Explicit gauge of the glove liner; do not infer from product code or a name without a gauge label."
+      },
+      {
+        "key": "length_mm",
+        "label": "Finished glove length",
+        "type": "number",
+        "unit": "mm",
+        "minimum": 1,
+        "description": "Length of the glove itself only. Never use carton Len/Wid/Hgt, weight, commodity code or standard numbers."
+      }
+    ]
+  },
+  "acceptance": {
+    "precision": 0.95,
+    "answerable_coverage": 0.8,
+    "traceability": 1.0,
+    "abstention": 0.9,
+    "ready_rate": 1.0
+  },
+  "sources": [
+    {
+      "id": "A040",
+      "filename": "A040.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A040&itemcol=A040NLR&lang=US",
+      "sha256": "57e0a8a75d12fc7a92c8b1612bb1a473010d4aec716bb584a60dd53bcda24002",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A060",
+      "filename": "A060.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A060&itemcol=A060O1R&lang=US",
+      "sha256": "eecacf1e6f97a20977d24b4495299779ade745fb451302fe56401ed52cc27fa6",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A106",
+      "filename": "A106.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A106&itemcol=A106G8R&lang=US",
+      "sha256": "ba2f81f2d789281f3ce4f36a5236731e4c3a7beed2e6b6ff1aaa3fc35061ed0a",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A110",
+      "filename": "A110.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A110&itemcol=A110WBR&lang=US",
+      "sha256": "29328982a029dce9afc1c000ba29fe1fea2dd4557b86785ece28c309526ba9c8",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A111",
+      "filename": "A111.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A111&itemcol=A111WBR&lang=US",
+      "sha256": "fc15d72bdb25fdfd51b392a1eb4ec0a55bfbe4bfb65573be9b24979013e40881",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A120",
+      "filename": "A120.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A120&itemcol=A120WHR&lang=US",
+      "sha256": "83aa2297232e9f41f7eb5edc9bb1d59685b7a4c853fe526419bb7b5bf5a7fbfd",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A123",
+      "filename": "A123.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A123&itemcol=A123K8R&lang=US",
+      "sha256": "10bf272a2a249e6d4d6557e5c832c34963dcbb94cdcd7e09d5247a4ce6a78709",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A130",
+      "filename": "A130.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A130&itemcol=A130ORR&lang=US",
+      "sha256": "3287e58d9be5f974c793026c541161eeaeb9693be3466b33ea515b9acbfa3a29",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A140",
+      "filename": "A140.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A140&itemcol=A140ORB&lang=US",
+      "sha256": "24be419f165aff2fa47a8e585b67f7b7469c42357659d0d1301e6c02b50d8833",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A145",
+      "filename": "A145.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A145&itemcol=A145OBL&lang=US",
+      "sha256": "1189e918e007ba950c0ffd7762900f391d7a5e0585d97b55f95a6db688008264",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A146",
+      "filename": "A146.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A146&itemcol=A146YER&lang=US",
+      "sha256": "683608070b7308239b58bcd65845a0d3f8c89aefde5a1a9cbfe6a60a36860281",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A148",
+      "filename": "A148.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A148&itemcol=A148O8R&lang=US",
+      "sha256": "0a6cc5427e8832f6425d82010168f555741dda9f745eb40bfa6d8185efac55d7",
+      "pages": 3,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A150",
+      "filename": "A150.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A150&itemcol=A150ORR&lang=US",
+      "sha256": "6d2dd0b9629e73a28075728dde058d517bbf4add77fe534a41d59e927c041f3b",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A195",
+      "filename": "A195.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A195&itemcol=A195K8R&lang=US",
+      "sha256": "0cf21b980b66a82b18fb011535630af8bbded665f96d0bb9b1f4e9a6c08480b3",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A198",
+      "filename": "A198.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A198&itemcol=A198GRR&lang=US",
+      "sha256": "b2dc3f9cd3f0dcc8cf665635bda0cc6728bdafbb3c932448c2818dcf7bf0b2ae",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A210",
+      "filename": "A210.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A210&itemcol=A210GRR&lang=US",
+      "sha256": "da15e84661d1f59cb3a3e2915272f914e0b7ac8a13a2cbbd5be196c4f0fb02fb",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A220",
+      "filename": "A220.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A220&itemcol=A220RER&lang=US",
+      "sha256": "44e23fb144a9aee24aa94947fe8a5cba1de9c9d220a45ea697b5d09467f14891",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A260",
+      "filename": "A260.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A260&itemcol=A260GRR&lang=US",
+      "sha256": "b8c906a10a6236cc12f13f67ca847cb6a4c7fcc9840e2461e3d968a641ab8cc9",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A261",
+      "filename": "A261.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A261&itemcol=A261WHR&lang=US",
+      "sha256": "9d3594872a64d0ef3d5e3d187f69cf95d9ce2c98bce801301e00cd8dae3ff94d",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A304",
+      "filename": "A304.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A304&itemcol=A304G4R&lang=US",
+      "sha256": "cf1f27e0dd07aa5ce5cc7f881ab1d96b3c24cfb2f73d1b9a2dbb8bcde86ea756",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A611",
+      "filename": "A611.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A611&itemcol=A611K4R&lang=US",
+      "sha256": "a4321ac8dc6750b749c648f6cceaa08938f0ab8d9e159cb33836e553e25dc1f3",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A621",
+      "filename": "A621.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A621&itemcol=A621BKR&lang=US",
+      "sha256": "30d3f8fac2d1aa8d499677a10a6224f18d13b7e6bda340c0d2faedc6c13fd97b",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A622",
+      "filename": "A622.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A622&itemcol=A622G7R&lang=US",
+      "sha256": "0af56b209f21df4ef30117ec2ddcd21ba2f2a0e63310ce382d4fbbe713bcfc1e",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A625",
+      "filename": "A625.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A625&itemcol=A625Y8R&lang=US",
+      "sha256": "25b4c5a3df24490e46c1dd1b9d67a7b3f5cb79f4f39d2dbc5c5d83fa409e84f1",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A626",
+      "filename": "A626.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A626&itemcol=A626Y5R&lang=US",
+      "sha256": "6a91eb138f5530855b4fccd08dfc94b2ea4f49f595dfbfcb43cc346f7add3652",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A630",
+      "filename": "A630.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A630&itemcol=A630G7R&lang=US",
+      "sha256": "055f893c69b3e33cdfc7f3b255ac62a6ff7ca596963f4c4bfbddd367b15ea44b",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A631",
+      "filename": "A631.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A631&itemcol=A631O8R&lang=US",
+      "sha256": "8377578e5ad306a26e06e6960fc9c638deef796191bb2e007093c1daaed089f7",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A632",
+      "filename": "A632.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A632&itemcol=A632E8R&lang=US",
+      "sha256": "2227fb2261553320640681e29a522bf08a89e4db2478b9033278deaddffccebc",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A636",
+      "filename": "A636.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A636&itemcol=A636G8R&lang=US",
+      "sha256": "97bf4ebc05e13cdb8940ab220c3c65891e5f515e4f482fe8df50835382febf3b",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    },
+    {
+      "id": "A637",
+      "filename": "A637.pdf",
+      "url": "https://documents.portwest.com/datasheet.php?style=A637&itemcol=A637G8R&lang=US",
+      "sha256": "af2466e939cb5a538466a940152f49a36479a3d4187f9b0b07bc6b8e896ea1e3",
+      "pages": 2,
+      "retrieved_at": "2026-09-16",
+      "redistribution": "Local evaluation cache only; original manufacturer copyright retained."
+    }
+  ],
+  "cases": [
+    {
+      "id": "A040",
+      "name": "Portwest A040",
+      "family": "A04-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A040",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A040"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Jersey Lining, Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "A040",
+              "page": 1,
+              "quote": "Materials:  Jersey Lining, Cotton",
+              "value": "Jersey Lining, Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A040",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            300
+          ],
+          "evidence": [
+            {
+              "source_id": "A040",
+              "page": 1,
+              "quote": "Outer Carton:  300",
+              "value": 300
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            18
+          ],
+          "evidence": [
+            {
+              "source_id": "A040",
+              "page": 1,
+              "quote": "18 gauge",
+              "value": 18
+            },
+            {
+              "source_id": "A040",
+              "page": 1,
+              "quote": "18 gauge",
+              "value": 18
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A060",
+      "name": "Portwest A060",
+      "family": "A06-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A060",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A060"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Cotton, TPR, Polycotton, Polycotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "A060",
+              "page": 1,
+              "quote": "Materials:  Cotton, TPR, Polycotton, Polycotton",
+              "value": "Cotton, TPR, Polycotton, Polycotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A106",
+      "name": "Portwest A106",
+      "family": "A10-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A106",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A106"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Cotton, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A106",
+              "page": 1,
+              "quote": "Materials:  Polyester, Cotton, Elastic",
+              "value": "Polyester, Cotton, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A106",
+              "page": 1,
+              "quote": "Outer Carton:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            10
+          ],
+          "evidence": [
+            {
+              "source_id": "A106",
+              "page": 1,
+              "quote": "10 gauge",
+              "value": 10
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A110",
+      "name": "Portwest A110",
+      "family": "A11-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A110",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A110"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A110",
+              "page": 1,
+              "quote": "Materials:  Polyester, Elastic",
+              "value": "Polyester, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A110",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            216
+          ],
+          "evidence": [
+            {
+              "source_id": "A110",
+              "page": 1,
+              "quote": "Outer Carton:  216",
+              "value": 216
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A110",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            },
+            {
+              "source_id": "A110",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A111",
+      "name": "Portwest A111",
+      "family": "A11-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A111",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A111"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Cotton, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A111",
+              "page": 1,
+              "quote": "Materials:  Polyester, Cotton, Elastic",
+              "value": "Polyester, Cotton, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A111",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            288
+          ],
+          "evidence": [
+            {
+              "source_id": "A111",
+              "page": 1,
+              "quote": "Outer Carton:  288",
+              "value": 288
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            7
+          ],
+          "evidence": [
+            {
+              "source_id": "A111",
+              "page": 1,
+              "quote": "7 gauge",
+              "value": 7
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A120",
+      "name": "Portwest A120",
+      "family": "A12-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A120",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A120"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A120",
+              "page": 1,
+              "quote": "Materials:  Polyester, Elastic",
+              "value": "Polyester, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A120",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            288
+          ],
+          "evidence": [
+            {
+              "source_id": "A120",
+              "page": 1,
+              "quote": "Outer Carton:  288",
+              "value": 288
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A120",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A123",
+      "name": "Portwest A123",
+      "family": "A12-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A123",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A123"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Latex Free Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A123",
+              "page": 1,
+              "quote": "Materials:  Polyester, Latex Free Elastane",
+              "value": "Polyester, Latex Free Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A123",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            1
+          ],
+          "evidence": [
+            {
+              "source_id": "A123",
+              "page": 1,
+              "quote": "Outer Carton:  1",
+              "value": 1
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A123",
+              "page": 1,
+              "quote": "13-gauge",
+              "value": 13
+            },
+            {
+              "source_id": "A123",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A130",
+      "name": "Portwest A130",
+      "family": "A13-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A130",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A130"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Cotton, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A130",
+              "page": 1,
+              "quote": "Materials:  Polyester, Cotton, Elastic",
+              "value": "Polyester, Cotton, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A130",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A130",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            7
+          ],
+          "evidence": [
+            {
+              "source_id": "A130",
+              "page": 1,
+              "quote": "7 gauge",
+              "value": 7
+            },
+            {
+              "source_id": "A130",
+              "page": 1,
+              "quote": "7 gauge",
+              "value": 7
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A140",
+      "name": "Portwest A140",
+      "family": "A14-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A140",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A140"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Acrylic, Elastic, Polyester"
+          ],
+          "evidence": [
+            {
+              "source_id": "A140",
+              "page": 1,
+              "quote": "Materials:  Acrylic, Elastic, Polyester",
+              "value": "Acrylic, Elastic, Polyester"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A140",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A140",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            10
+          ],
+          "evidence": [
+            {
+              "source_id": "A140",
+              "page": 1,
+              "quote": "10 gauge",
+              "value": 10
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A145",
+      "name": "Portwest A145",
+      "family": "A14-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A145",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A145"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Acrylic, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A145",
+              "page": 1,
+              "quote": "Materials:  Polyester, Acrylic, Elastic",
+              "value": "Polyester, Acrylic, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A145",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            120
+          ],
+          "evidence": [
+            {
+              "source_id": "A145",
+              "page": 1,
+              "quote": "Outer Carton:  120",
+              "value": 120
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            7
+          ],
+          "evidence": [
+            {
+              "source_id": "A145",
+              "page": 1,
+              "quote": "7 gauge",
+              "value": 7
+            },
+            {
+              "source_id": "A145",
+              "page": 1,
+              "quote": "7 gauge",
+              "value": 7
+            },
+            {
+              "source_id": "A145",
+              "page": 1,
+              "quote": "7 gauge",
+              "value": 7
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A146",
+      "name": "Portwest A146",
+      "family": "A14-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A146",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A146"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Acrylic, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A146",
+              "page": 1,
+              "quote": "Materials:  Polyester, Acrylic, Elastic",
+              "value": "Polyester, Acrylic, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A146",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A146",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            15,
+            10
+          ],
+          "evidence": [
+            {
+              "source_id": "A146",
+              "page": 1,
+              "quote": "15 gauge",
+              "value": 15
+            },
+            {
+              "source_id": "A146",
+              "page": 1,
+              "quote": "10 gauge",
+              "value": 10
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false,
+          "note": "The source describes more than one liner layer; either explicitly stated gauge is acceptable with its own citation. Do not merge layer counts."
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A148",
+      "name": "Portwest A148",
+      "family": "A14-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A148",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A148"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Acrylic, Polyester, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A148",
+              "page": 1,
+              "quote": "Materials:  Acrylic, Polyester, Elastane",
+              "value": "Acrylic, Polyester, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A148",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A148",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A148",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A150",
+      "name": "Portwest A150",
+      "family": "A15-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A150",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A150"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Recycled Polyester , Cotton, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A150",
+              "page": 1,
+              "quote": "Materials:  Recycled Polyester , Cotton, Elastic",
+              "value": "Recycled Polyester , Cotton, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A150",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            216
+          ],
+          "evidence": [
+            {
+              "source_id": "A150",
+              "page": 1,
+              "quote": "Outer Carton:  216",
+              "value": 216
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            10
+          ],
+          "evidence": [
+            {
+              "source_id": "A150",
+              "page": 1,
+              "quote": "10 gauge",
+              "value": 10
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A195",
+      "name": "Portwest A195",
+      "family": "A19-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A195",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A195"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A195",
+              "page": 1,
+              "quote": "Materials:  Polyester, Elastic",
+              "value": "Polyester, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A195",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            360
+          ],
+          "evidence": [
+            {
+              "source_id": "A195",
+              "page": 1,
+              "quote": "Outer Carton:  360",
+              "value": 360
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A195",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            },
+            {
+              "source_id": "A195",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A198",
+      "name": "Portwest A198",
+      "family": "A19-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A198",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A198"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Carbon Fiber, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A198",
+              "page": 1,
+              "quote": "Materials:  Polyester, Carbon Fiber, Elastic",
+              "value": "Polyester, Carbon Fiber, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A198",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            240
+          ],
+          "evidence": [
+            {
+              "source_id": "A198",
+              "page": 1,
+              "quote": "Outer Carton:  240",
+              "value": 240
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A198",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            },
+            {
+              "source_id": "A198",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A210",
+      "name": "Portwest A210",
+      "family": "A21-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A210",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A210"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Cow Split Leather, Cotton, Rubber, Elastic, Polyester"
+          ],
+          "evidence": [
+            {
+              "source_id": "A210",
+              "page": 1,
+              "quote": "Materials:  Cow Split Leather, Cotton, Rubber, Elastic,\nPolyester",
+              "value": "Cow Split Leather, Cotton, Rubber, Elastic, Polyester"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A210",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            96
+          ],
+          "evidence": [
+            {
+              "source_id": "A210",
+              "page": 1,
+              "quote": "Outer Carton:  96",
+              "value": 96
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A220",
+      "name": "Portwest A220",
+      "family": "A22-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A220",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A220"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Cow Split Leather, Polyester, Rubber, Elastic, Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "A220",
+              "page": 1,
+              "quote": "Materials:  Cow Split Leather, Polyester, Rubber, Elastic,\nCotton",
+              "value": "Cow Split Leather, Polyester, Rubber, Elastic, Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A220",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            96
+          ],
+          "evidence": [
+            {
+              "source_id": "A220",
+              "page": 1,
+              "quote": "Outer Carton:  96",
+              "value": 96
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A260",
+      "name": "Portwest A260",
+      "family": "A26-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A260",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A260"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Full-Grain Leather, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A260",
+              "page": 1,
+              "quote": "Materials:  Full-Grain Leather, Elastic",
+              "value": "Full-Grain Leather, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A260",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            240
+          ],
+          "evidence": [
+            {
+              "source_id": "A260",
+              "page": 1,
+              "quote": "Outer Carton:  240",
+              "value": 240
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A261",
+      "name": "Portwest A261",
+      "family": "A26-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A261",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A261"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Goatskin, Cotton, Grain Sheep Leather, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A261",
+              "page": 1,
+              "quote": "Materials:  Goatskin, Cotton, Grain Sheep Leather, Elastic",
+              "value": "Goatskin, Cotton, Grain Sheep Leather, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A261",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A261",
+              "page": 1,
+              "quote": "Outer Carton:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A304",
+      "name": "Portwest A304",
+      "family": "A30-family",
+      "split": "development",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A304",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A304"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Polyester, Glass Fibre, Elastane, Nitrile, Cotton"
+          ],
+          "evidence": [
+            {
+              "source_id": "A304",
+              "page": 1,
+              "quote": "Materials:  HPPE, Polyester, Glass Fibre, Elastane, Nitrile,\nCotton",
+              "value": "HPPE, Polyester, Glass Fibre, Elastane, Nitrile, Cotton"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A304",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A304",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            },
+            {
+              "source_id": "A304",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A611",
+      "name": "Portwest A611",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A611",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A611"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "Polyester, Aramid, Steel Fiber, Elastic"
+          ],
+          "evidence": [
+            {
+              "source_id": "A611",
+              "page": 1,
+              "quote": "Materials:  Polyester, Aramid, Steel Fiber, Elastic",
+              "value": "Polyester, Aramid, Steel Fiber, Elastic"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A611",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A611",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            10
+          ],
+          "evidence": [
+            {
+              "source_id": "A611",
+              "page": 1,
+              "quote": "10 gauge",
+              "value": 10
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A621",
+      "name": "Portwest A621",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A621",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A621"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Polyester, Glass Fibre, Elastic, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A621",
+              "page": 1,
+              "quote": "Materials:  HPPE, Polyester, Glass Fibre, Elastic, Elastane",
+              "value": "HPPE, Polyester, Glass Fibre, Elastic, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A621",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A621",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A621",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A622",
+      "name": "Portwest A622",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A622",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A622"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Elastic, Glass Fibre, Polyester, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A622",
+              "page": 1,
+              "quote": "Materials:  HPPE, Elastic, Glass Fibre, Polyester, Elastane",
+              "value": "HPPE, Elastic, Glass Fibre, Polyester, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A622",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A622",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A622",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A625",
+      "name": "Portwest A625",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A625",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A625"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Polyester, Steel Fiber, Elastic, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A625",
+              "page": 1,
+              "quote": "Materials:  HPPE, Polyester, Steel Fiber, Elastic, Elastane",
+              "value": "HPPE, Polyester, Steel Fiber, Elastic, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A625",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A625",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A625",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A626",
+      "name": "Portwest A626",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A626",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A626"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Glass Fibre, Polyester, Elastic, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A626",
+              "page": 1,
+              "quote": "Materials:  HPPE, Glass Fibre, Polyester, Elastic, Elastane",
+              "value": "HPPE, Glass Fibre, Polyester, Elastic, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A626",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A626",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A626",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            },
+            {
+              "source_id": "A626",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A630",
+      "name": "Portwest A630",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A630",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A630"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Glass Fibre, Cow Split Leather, Elastic, Polyester, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A630",
+              "page": 1,
+              "quote": "Materials:  HPPE, Glass Fibre, Cow Split Leather, Elastic,\nPolyester, Elastane",
+              "value": "HPPE, Glass Fibre, Cow Split Leather, Elastic, Polyester, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A630",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            120
+          ],
+          "evidence": [
+            {
+              "source_id": "A630",
+              "page": 1,
+              "quote": "Outer Carton:  120",
+              "value": 120
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A630",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A631",
+      "name": "Portwest A631",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A631",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A631"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Steel Fiber, Elastic, Polyester, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A631",
+              "page": 1,
+              "quote": "Materials:  HPPE, Steel Fiber, Elastic, Polyester, Elastane",
+              "value": "HPPE, Steel Fiber, Elastic, Polyester, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A631",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A631",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A631",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A632",
+      "name": "Portwest A632",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A632",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A632"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Steel Fiber, Elastic, Polyester, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A632",
+              "page": 1,
+              "quote": "Materials:  HPPE, Steel Fiber, Elastic, Polyester, Elastane",
+              "value": "HPPE, Steel Fiber, Elastic, Polyester, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A632",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A632",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            13
+          ],
+          "evidence": [
+            {
+              "source_id": "A632",
+              "page": 1,
+              "quote": "13 gauge",
+              "value": 13
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A636",
+      "name": "Portwest A636",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A636",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A636"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Steel Fiber, Glass Fibre, Nylon, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A636",
+              "page": 1,
+              "quote": "Materials:  HPPE, Steel Fiber, Glass Fibre, Nylon, Elastane",
+              "value": "HPPE, Steel Fiber, Glass Fibre, Nylon, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [
+            12
+          ],
+          "evidence": [
+            {
+              "source_id": "A636",
+              "page": 1,
+              "quote": "Inner Pack:  12",
+              "value": 12
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A636",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            18
+          ],
+          "evidence": [
+            {
+              "source_id": "A636",
+              "page": 1,
+              "quote": "18 gauge",
+              "value": 18
+            },
+            {
+              "source_id": "A636",
+              "page": 1,
+              "quote": "18 gauge",
+              "value": 18
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    },
+    {
+      "id": "A637",
+      "name": "Portwest A637",
+      "family": "A6-series",
+      "split": "holdout",
+      "identity": {
+        "manufacturer": "Portwest",
+        "model": "A637",
+        "mpn": ""
+      },
+      "source_ids": [
+        "A637"
+      ],
+      "expected": {
+        "material": {
+          "values": [
+            "HPPE, Steel Fiber, Glass Fibre, Nylon, Elastane"
+          ],
+          "evidence": [
+            {
+              "source_id": "A637",
+              "page": 1,
+              "quote": "Materials:  HPPE, Steel Fiber, Glass Fibre, Nylon, Elastane",
+              "value": "HPPE, Steel Fiber, Glass Fibre, Nylon, Elastane"
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "inner_pack_count": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        },
+        "outer_carton_count": {
+          "values": [
+            144
+          ],
+          "evidence": [
+            {
+              "source_id": "A637",
+              "page": 1,
+              "quote": "Outer Carton:  144",
+              "value": 144
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "gauge": {
+          "values": [
+            18
+          ],
+          "evidence": [
+            {
+              "source_id": "A637",
+              "page": 1,
+              "quote": "18 gauge",
+              "value": 18
+            },
+            {
+              "source_id": "A637",
+              "page": 1,
+              "quote": "18 gauge",
+              "value": 18
+            }
+          ],
+          "absence_reason": null,
+          "conflict": false
+        },
+        "length_mm": {
+          "values": [],
+          "evidence": [],
+          "absence_reason": "Not stated for the glove in this source; do not infer from model name or carton dimensions.",
+          "conflict": false
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Single manufacturer, one category, model-level identities without size-specific claims.",
+    "Conflict, variant and prompt-injection cases are covered in a separately identified synthetic supplement.",
+    "Official dynamic PDFs contain retrieval-date metadata; changed downloads require explicit dataset review, never silently replace pinned bytes."
+  ],
+  "review_notes": [
+    "A060 has an unlabeled \": 12\" below Materials. It is excluded from the material and is not inferred as an inner or outer pack count.",
+    "A146 explicitly states both 15-gauge and 10-gauge liners; value-bound citations allow either stated layer.",
+    "Finished glove length remains unknown; A631/A632 give cuff extension only and page-2 tables give carton dimensions.",
+    "Some original manufacturer PDFs have malformed headers or clipped labels. The original bytes are retained; pypdf extraction and Poppler rendering were checked."
+  ]
+}

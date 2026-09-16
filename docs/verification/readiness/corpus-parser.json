@@ -1,0 +1,156 @@
+{
+  "sources_parsed": 30,
+  "paid_calls": 0,
+  "sources": [
+    {
+      "id": "A040",
+      "sections": 2,
+      "text_characters": 1819
+    },
+    {
+      "id": "A060",
+      "sections": 2,
+      "text_characters": 1583
+    },
+    {
+      "id": "A106",
+      "sections": 2,
+      "text_characters": 2401
+    },
+    {
+      "id": "A110",
+      "sections": 2,
+      "text_characters": 2290
+    },
+    {
+      "id": "A111",
+      "sections": 2,
+      "text_characters": 2046
+    },
+    {
+      "id": "A120",
+      "sections": 2,
+      "text_characters": 2711
+    },
+    {
+      "id": "A123",
+      "sections": 2,
+      "text_characters": 2545
+    },
+    {
+      "id": "A130",
+      "sections": 2,
+      "text_characters": 2025
+    },
+    {
+      "id": "A140",
+      "sections": 2,
+      "text_characters": 2478
+    },
+    {
+      "id": "A145",
+      "sections": 2,
+      "text_characters": 2421
+    },
+    {
+      "id": "A146",
+      "sections": 2,
+      "text_characters": 2733
+    },
+    {
+      "id": "A148",
+      "sections": 3,
+      "text_characters": 4215
+    },
+    {
+      "id": "A150",
+      "sections": 2,
+      "text_characters": 2551
+    },
+    {
+      "id": "A195",
+      "sections": 2,
+      "text_characters": 2646
+    },
+    {
+      "id": "A198",
+      "sections": 2,
+      "text_characters": 2381
+    },
+    {
+      "id": "A210",
+      "sections": 2,
+      "text_characters": 2048
+    },
+    {
+      "id": "A220",
+      "sections": 2,
+      "text_characters": 2193
+    },
+    {
+      "id": "A260",
+      "sections": 2,
+      "text_characters": 2130
+    },
+    {
+      "id": "A261",
+      "sections": 2,
+      "text_characters": 2305
+    },
+    {
+      "id": "A304",
+      "sections": 2,
+      "text_characters": 2351
+    },
+    {
+      "id": "A611",
+      "sections": 2,
+      "text_characters": 2148
+    },
+    {
+      "id": "A621",
+      "sections": 2,
+      "text_characters": 2221
+    },
+    {
+      "id": "A622",
+      "sections": 2,
+      "text_characters": 2223
+    },
+    {
+      "id": "A625",
+      "sections": 2,
+      "text_characters": 2242
+    },
+    {
+      "id": "A626",
+      "sections": 2,
+      "text_characters": 2389
+    },
+    {
+      "id": "A630",
+      "sections": 2,
+      "text_characters": 2281
+    },
+    {
+      "id": "A631",
+      "sections": 2,
+      "text_characters": 2212
+    },
+    {
+      "id": "A632",
+      "sections": 2,
+      "text_characters": 2200
+    },
+    {
+      "id": "A636",
+      "sections": 2,
+      "text_characters": 3001
+    },
+    {
+      "id": "A637",
+      "sections": 2,
+      "text_characters": 3069
+    }
+  ]
+}

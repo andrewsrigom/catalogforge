@@ -1,0 +1,6 @@
+*.pdf binary
+*.png binary
+*.csv -text whitespace=cr-at-eol
+
+# Preserve intentional blank fixture values and original document bytes.
+fixtures/sources/01-technical-records.txt whitespace=-blank-at-eol

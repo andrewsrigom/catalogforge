@@ -1,0 +1,125 @@
+CatalogForge product specification
+
+PURPOSE
+
+CatalogForge enriches incomplete product catalogs from supporting documents.
+Each proposal includes source evidence and requires an explicit review decision.
+Imported values remain intact; unsupported fields remain unknown.
+
+SCOPE
+
+- CSV catalog import with preview and column mapping.
+- Text-based PDF, TXT and CSV source ingestion.
+- Versioned category schemas and product identity matching.
+- Attribute extraction, normalization, validation and conflict detection.
+- Persistent processing, field-level review and catalog export.
+- A seeded protective-work-glove category with synthetic examples.
+
+CRM, orders, pricing, inventory management, public-web crawling, OCR and
+automatic publication to external systems are outside the product scope.
+
+COMPONENTS
+
+- Vue 3 and TypeScript provide the catalog and review interface.
+- FastAPI, Pydantic and SQLAlchemy implement contracts and business services.
+- PostgreSQL stores business data, the Procrastinate queue and LangGraph
+  checkpoints; pgvector supports retrieval within a configured embedding space.
+- A separate worker executes ingestion and per-product enrichment graphs.
+- LangChain provides document processing, embeddings, retrieval tools and
+  structured model output.
+- Docker Compose runs web, API, worker and database services. Uploaded files
+  and the database use persistent storage.
+
+See ARCHITECTURE.md for transaction boundaries and implementation details.
+
+CATALOG AND SCHEMAS
+
+CSV imports preserve original rows and unmapped columns. Category schemas define
+attribute keys, names, aliases, types, required fields, allowed values, units,
+ranges and extraction descriptions. Each run records its schema version.
+
+Physical-unit conversion is separate from packaging conversion. Box, item and
+pair counts require explicit evidence of their relationship. A contradiction
+with a populated original value is a review exception, not an automatic edit.
+
+INGESTION
+
+The ingestion graph validates uploaded bytes, stores a content hash, extracts
+text and structural metadata, splits records while preserving context, resolves
+identifiers, generates embeddings and persists searchable chunks.
+
+Sources retain filename, version and chunk identifiers, with PDF pages, CSV rows
+and section labels where available. Duplicate bytes reuse a workspace document.
+Empty, scanned or unsupported documents receive explicit failure states.
+Embedding mode, model and dimension define the space used for retrieval.
+
+ENRICHMENT AND IDENTITY
+
+Each product has an independent, checkpointed workflow. It inspects missing
+fields, retrieves passages, verifies product identity, extracts and validates
+candidates, persists proposals and interrupts for review. Additional retrieval
+is bounded; one failed product does not block an entire batch.
+
+Exact manufacturer, model, part number and variant constrain evidence. Family
+statements require explicit applicability. Semantic similarity ranks passages
+but does not establish identity. Different sizes, coatings and packaging
+variants cannot silently supply facts for the current product.
+
+EVIDENCE AND REVIEW
+
+Candidates record original, raw and normalized values; source versions and
+chunks; page/row/section references; quotations; identity basis; validation
+results; conflicts; and review decisions. Evidence must belong to the workspace
+and have been available to the run. Quotations must match source text.
+
+Reviewers can approve or reject individual fields, explicitly select supported
+fields for bulk approval, resolve conflicts with reasons and submit validated
+manual values. Manual edits are labeled and do not count as source-supported
+evidence. Completeness, validation failures and evidence coverage are separate.
+
+Decisions bind to proposal versions and product revisions. Source, schema or
+product changes can require revalidation. Idempotency keys, version checks and
+transactional application protect repeated deliveries. Checkpoints preserve
+progress without implying exactly-once execution.
+
+EXPORT
+
+Exports are immutable snapshots. The ZIP contains a CSV with original and
+approved values plus a JSON evidence report and review notes. Unapproved
+proposals do not populate accepted catalog values.
+
+PROVIDER MODES AND LIMITS
+
+Fixture mode replaces provider behavior with deterministic responses for
+supported synthetic inputs while retaining the same application workflows.
+Real mode uses separately configured chat and embedding models. It never
+silently falls back to fixtures. Missing credentials and provider failures
+produce explicit errors.
+
+Calls, tokens, retrieval rounds, retries, concurrency and duration are bounded.
+Configured prices enable monetary budgets. Cancellation is checked between
+nodes and cannot undo a remote call already sent. Documents are untrusted input;
+model operations do not receive arbitrary SQL, filesystem or shell access.
+
+AUTHORIZATION AND INTERFACE
+
+Server-side sessions, workspace membership and reviewer permissions govern
+data, retrieval, files, events and resumption. Write requests require CSRF and
+origin checks. The review interface presents current values, proposals and
+evidence together, with source navigation and persisted execution history.
+
+The UI distinguishes loading, empty, failed, interrupted and completed states.
+Polling updates active screens. Diagnostic views expose recorded events and
+validation outcomes, not hidden model reasoning.
+
+EVALUATION
+
+Versioned datasets measure identity, retrieval, attribute correctness, evidence,
+unsupported proposals, abstention, conflicts and workflow outcomes separately.
+Fixture integration and live-model quality have separate reports. Results name
+their dataset, prompt/model versions and measurement scope; unknown usage or
+unconfigured cost remains unavailable.
+
+PostgreSQL integration and browser tests cover import, ingestion, review,
+authorization, stale proposals, idempotency, recovery, provider failures and
+export. Measured results and known errors are in RELEASE_REVIEW.md.

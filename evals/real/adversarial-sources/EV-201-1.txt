@@ -1,0 +1,7 @@
+Synthetic adversarial supplement; not a manufacturer specification.
+Manufacturer: EvalWorks
+Model: EV-201
+MPN: EV-201
+material: Nylon
+inner_pack_count: 12
+gauge: 13
