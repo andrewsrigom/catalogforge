@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <a href="#demo">Demo</a> ·
   <a href="#quick-start">Quick start</a> ·
   <a href="#workflow">Workflow</a> ·
   <a href="#architecture">Architecture</a> ·
@@ -18,9 +19,13 @@
 
 CatalogForge turns product documents into attribute proposals that a reviewer can inspect and approve. It matches product identity, checks citations and keeps conflicting or unsupported values out of the approved catalog. Imported records remain intact.
 
-![A Nylon proposal beside its highlighted quotation in the source PDF](docs/screenshots/pdf-evidence.png)
+## Demo
 
-*Evidence inspector with a fictional Northstar product from the included walkthrough.*
+[![CatalogForge demo: record a decision reason and approve evidence-backed product values](docs/media/catalogforge-demo.gif)](docs/media/catalogforge-demo.mp4)
+
+[Watch the full demo](docs/media/catalogforge-demo.mp4) · 69 seconds · 1080p · No audio
+
+Review conflicting proposals, inspect the original PDF, approve product values and export the updated catalog. Recorded locally with synthetic data in fixture mode.
 
 ## Quick start
 
