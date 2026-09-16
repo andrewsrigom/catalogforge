@@ -21,9 +21,9 @@ CatalogForge turns product documents into attribute proposals that a reviewer ca
 
 ## Demo
 
-[![CatalogForge demo: record a decision reason and approve evidence-backed product values](docs/media/catalogforge-demo.gif)](docs/media/catalogforge-demo.mp4)
+[![CatalogForge demo: record a decision reason and approve evidence-backed product values](docs/media/catalogforge-demo.gif)](https://github.com/andrewsrigom/catalogforge/raw/refs/heads/main/docs/media/catalogforge-demo.mp4)
 
-[Watch the full demo](docs/media/catalogforge-demo.mp4) · 69 seconds · 1080p · No audio
+[Download the full demo](https://github.com/andrewsrigom/catalogforge/raw/refs/heads/main/docs/media/catalogforge-demo.mp4) · 69 seconds · 1080p · No audio
 
 Review conflicting proposals, inspect the original PDF, approve product values and export the updated catalog. Recorded locally with synthetic data in fixture mode.
 
